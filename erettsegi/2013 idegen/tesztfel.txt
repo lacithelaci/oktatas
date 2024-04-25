@@ -1,0 +1,11 @@
+3 2 Mennyivel tobb 90 fok szinusza -90 fok szinuszanal?
+1 1014 Milyen magas a Kekesteto
+2 8 Hany oldallapja van az oktaedernek?
+3 1336 Mikor vezette be Karoly Robert a kapuadot?
+2 6 Hany kerulete van Budapestnek Budan?
+2 150 Mennyit kapunk, ha megnoveljuk 120-at 25%-kal?
+2 120 Mennyi 5 faktorialisa?
+2 5050 Mennyi az elso 100 szam osszege?
+3 77 Hany km hosszu a Balaton?
+2 5050 Mennyi az elso 100 szam osszege?
+A feladatsorra osszesen 22 pont adhato. 
