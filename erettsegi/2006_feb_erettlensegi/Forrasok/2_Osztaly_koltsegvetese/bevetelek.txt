@@ -1,0 +1,38 @@
+Név	Elõzõ évi maradvány	Szeptember	Október	November	December	Január	Február	Március	Április
+Albert	5 000 	3 000 	3 000 
+Arany	7 000 	3 000 	3 000 
+Árva	5 000 	3 000 	0 
+Ázsok	5 000 	3 000 	3 000 
+Balogh	5 000 	3 000 	3 000 
+Cilei	5 000 	3 000 	3 000 
+Csaba	7 000 	3 000 	3 000 
+Dömsödi	5 000 	3 000 	3 000 
+Endrei	7 000 	0 	3 000 
+Érmelléki	7 000 	3 000 	3 000 
+Fejes	5 000 	3 000 	3 000 
+Fitos	5 000 	3 000 	3 000 
+Göröcs	5 000 	3 000 	0 
+Gyulai	5 000 	3 000 	3 000 
+Hajnal	7 000 	3 000 	3 000 
+Hence	7 000 	3 000 	3 000 
+István	7 000 	3 000 	3 000 
+Jakab	5 000 	3 000 	3 000 
+Kajtos	5 000 	0 	3 000 
+Kaszás	5 000 	0 	3 000 
+Ligeti	5 000 	3 000 	3 000 
+Makács	5 000 	3 000 	3 000 
+Nagy	5 000 	3 000 	3 000 
+Nyúl	5 000 	3 000 	3 000 
+Orosz	5 000 	3 000 	3 000 
+Ördög	7 000 	3 000 	3 000 
+Ötvös	7 000 	3 000 	3 000 
+Pálos	5 000 	3 000 	0 
+Rajna	5 000 	3 000 	3 000 
+Rozsom	7 000 	3 000 	3 000 
+Sebes	7 000 	3 000 	3 000 
+Szigeti	5 000 	3 000 	3 000 
+Tisza	5 000 	3 000 	3 000 
+Ujvári	7 000 	0 	0 
+Vidák	7 000 	3 000 	3 000 
+Zala	5 000 	3 000 	3 000 
+Zsobó	5 000 	0 	3 000 
