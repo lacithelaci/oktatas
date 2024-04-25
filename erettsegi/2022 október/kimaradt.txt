@@ -1,0 +1,5 @@
+4 25 33 időeltérés 1
+4 55 33 koordináta-eltérés 1
+5 5 33 időeltérés 1
+6 22 42 időeltérés 2
+6 32 42 koordináta-eltérés 2
