@@ -27,8 +27,6 @@ if exists:
     print(f"A '{file_path}' fájl létezik.")
 else:
     print(f"A '{file_path}' fájl nem létezik.")
-import sys
-
 # Parancssori argumentumok kezelése
 arguments = sys.argv
 if len(arguments) > 1:
