@@ -46,7 +46,7 @@ def otodik_feladat(lista: list[Osztaly]) -> None:
 def ellenorzo(parameter_azonosito: int, parameter_lista: list[Osztaly]) -> bool:
     seged_lista = [str(x.cselekves) for x in parameter_lista if
                    parameter_azonosito == x.az and x.ora < "11:00" and x.cselekves in [1, 2]]
-    return "2" not in "".join(seged_lista) and "11" in "".join(seged_lista)
+    return "2" not in seged_lista and seged_lista.count("1") == 2
 
 
 def hatodik_feladat(lista: list[Osztaly]) -> None:
