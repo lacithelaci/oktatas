@@ -15,9 +15,6 @@ def beolvas() -> list[str]:
     return lista
 
 
-import random
-
-
 def main() -> None:
     talalat = 1
     kivalasztott_szo = random.choice(beolvas())
