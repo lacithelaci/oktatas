@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+    <meta charset="utf-8" />
+    <title>Calculating Practice Hours</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:Order msdt:dt="string">399841200.000000</mso:Order>
+<mso:ContentTypeId msdt:dt="string">0x0101009F1A1A9B9131484CB900844943E1876F</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <section id="main">
+        <section id="main_content">
+            <h1>Guitar Lessons</h1>
+            <p>We have a comprehensive 20-hour series on learning to play the guitar.</p>
+            <p>
+                Enter the number of hours per week you can dedicate to learning:
+                <input type="number" id="practiceHours" name="Practice Hours:"
+                       onchange="getPracticeHours();" />
+            </p>
+            <p id="practiceWeeks">&nbsp;</p>
+            <p id="practiceDetails">&nbsp;</p>
+
+            <script language="JavaScript">
+                var lessonStartDate = new Date('October 2, 2019 06:00:00 PM');
+                var lessonEndDate = new Date(lessonStartDate);
+                lessonEndDate.setDate(lessonEndDate.getDate() + 56);
+                var today = new Date();
+                var daysUntilStart = parseInt((lessonStartDate - today) / 86400000 )// number of milliseconds in a day
+                var monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                function getPracticeHours() {
+                    try
+                    {
+                        var hoursEntered = parseInt(document.getElementById('practiceHours').value)
+                        var msg1 = 'It will take you '
+                        var msg2 = 20 / hoursEntered
+                        var msg3 = ' weeks to finish this program.'
+                        var msg4 = 'Can you do '
+                        var msg5 = hoursEntered
+                        var msg6 = ' per week for '
+                        var msg7 = ' weeks? Or is this just a "dream?"'
+
+                        document.getElementById('practiceWeeks').innerHTML =
+                            // put concat here
+                            msg1.concat(msg2, msg3) + '<br />' + msg4.concat(msg5, msg6, msg2, msg7);
+                        document.getElementById('practiceDetails').innerHTML = "New classes start on "
+                            + monthName[lessonStartDate.getMonth()] + " " + lessonStartDate.getDate() + ","
+                            + daysUntilStart + " days from now." +
+                            "<br /> Lessons end on " + lessonEndDate.toLocaleDateString();
+                        if (hoursEntered < 3) {
+                            document.getElementById('practiceDetails').innerHTML +=
+                                "<br /> You really should practice at least three hours a week to best retain what you learn.";
+                        }
+                        if (hoursEntered > 8) {
+                            document.getElementById('practiceDetails').innerHTML +=
+                                "<br /> More than eight hours a week of practice at first could be overkill.";
+                        }  
+                    }
+                    catch(error)
+                    {
+                        alert("Error: " + error.description);
+                    }
+                }
+
+                function lessonSchedule() {
+                    
+                }
+
+            </script>
+        </section>
+    </section>
+</body>
+</html>
