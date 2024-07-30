@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><!-- InstanceBegin template="/Templates/Design Template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+    <meta charset="utf-8" />
+
+    <!-- InstanceBeginEditable name="docname" -->
+    <title>The Music Store - Products</title>
+    <!-- InstanceEndEditable -->
+    
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <script src="scripts/main.js"></script>
+    <!-- InstanceBeginEditable name="headscripts" -->
+    
+    <!-- InstanceEndEditable -->
+
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:Order msdt:dt="string">399844000.000000</mso:Order>
+<mso:ContentTypeId msdt:dt="string">0x0101009F1A1A9B9131484CB900844943E1876F</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body onload="hideStatus();">
+   <section id="main">
+	   	<section id="main_content">
+  			<header>
+  				<div id="sitelogo">
+					<a href="index.html"><img src="images/logo.png" alt="The Music Store"/></a>
+				</div>
+    <!-- InstanceBeginEditable name="pagecontents" -->
+    			<div id="headerinfo">
+					<p>&nbsp;</p>
+					<p>Call now: <span style="font-size: 1.5em;">800.555.3839</span></p>
+ 				</div>
+	    	</header>
+
+<!-- End Header -->
+
+<!-- Begin Content -->
+
+
+	        <h1>Products</h1>
+	        
+	        <section id="thumbnails">
+		        <article class="itemthumbnail">
+		        	<a href="" <!-- rollover mandolin-->"><img src="images/mandolin.jpg" alt="Mandolin" /></a>
+				</article>
+	        	
+	    	    <article class="itemthumbnail">
+					<a href="" <!-- rollover trombone-->;"><img src="images/Trombone.jpg" alt="Trombone" /></a>
+				</article>
+
+	    	    <article class="itemthumbnail">
+					<a href="" <!-- rollover drum-->;"><img src="images/DRUM.jpg" alt="Drum" /></a>
+				</article>
+
+	    	    <article class="itemthumbnail">
+					<a href="" <!-- rollover kazoo-->;"><img src="images/Kazoo.jpg" alt="Kazoo" /></a>
+				</article>
+
+	    	    <article class="itemthumbnail">
+					<a href="" <!-- rollover musicbooks-->;"><img src="images/musicbooks.jpg" alt="Music Books" /></a>
+				</article>
+
+	<div class="clear"></div>
+			<hr />
+				<p>&nbsp;</p>
+				<div id="details">
+	        		  <img id="itemImage" src="images/mandolin.jpg" alt="Mandolin" />
+
+    		      <article class="itemdetails">
+					<h2 id="itemName">F-Style Mandolin</h2>
+					<p id="itemDescription">The exuberant sound of a zealous Mandolin solo harkens the countryside of the Appalachians and effectively expresses the bittersweet melodies of yesteryear. The wood’s natural beauty is amplified by a high-gloss finish, while delivering a generously warm and rich sound.</p>
+                      <p id="itemPrice">350.00</p>
+				  
+					  
+
+				  </article>
+				</div>
+
+			</section>
+
+	<div class="clear"></div>
+
+        	
+
+    <!-- InstanceEndEditable -->
+
+<!-- End Content -->
+
+
+	   </section>
+   </section>
+
+
+<!-- Begin Footer -->
+
+	   <footer>
+			<p><a href="index.html">Home</a> | <a href="products.htm">Products</a> | <a href="lessons.htm">Lessons</a> | <a href="contact.htm">Contact Us</a></p>
+
+       		<p>Copyright &copy; 2017 The Music Store, 1000 Broadway, Salt Lake City, UT 84103</p>
+
+       		<p class="social"><img src="images/icon_facebook.png" alt="Facebook"/><img src="images/icon_googleplus.png" alt="Google+"/><img src="images/icon_linkedin.png" alt="LinkedIn"/><img src="images/icon_twitter.png" alt="Twitter"/><img src="images/icon_youtube.png" alt="YouTube"/><img src="images/icon_rss.png" alt="RSS"/></p>
+	   </footer>
+<script>
+    var mandolin = new product('F-Style Mandolin',
+        'The exuberant sound of a zealous Mandolin solo harkens the countryside of the Appalachians and effectively expresses the bittersweet melodies of yesteryear. The wood’s natural beauty is amplified by a high-gloss finish, while delivering a generously warm and rich sound.'
+        , 350.00, 'mandolin');
+    var trombone = new product('Student Trombone',
+        'With an exceptional design and outstanding craftsmanship, the enhanced durability of this model will result in years of musical enjoyment and offer any student the opportunity to develop a lifelong affiliation with music.   Designed for easy tone production and projection. Includes mouthpiece and a case.'
+        , 230.00, 'trombone');
+    var drum = new product('Red Floor Tom',
+        'Setting the standards for sound and value, this drum’s ability to resonate is a key factor in achieving an overwhelming performance.  Fitted with a birch shell and stainless steel hoops, this quality hardware comes in a variety of finishes. '
+        , 150.00, 'drum');
+    var kazoo = new product('Kazoo 3-Pack',
+        'The easiest of all instruments to learn and play, the affordability of kazoos makes outfitting the largest of music classes an easy task. Color selection may vary based on current inventory. '
+        , 3.95, 'kazoo');
+    var musicbooks = new product('College Prep Textbook Pack: Volume 3',
+        'This collection of textbooks will prepare any aspiring music major for their third and fourth years of study, focusing on the Romantic and Post-Tonal eras of music, instrumentation and orchestration techniques, as well as current electronic and computer-generated music and recording methods. '
+        , 340.00, 'musicbooks');
+    
+    function mouseOverPic(product) {
+        document.getElementById('itemImage').src = "images\\" + product.imgsrc + ".jpg";
+        document.getElementById('itemName').innerHTML = product.item;
+        document.getElementById('itemDescription').innerHTML = product.description;
+        document.getElementById('itemPrice').innerHTML = product.price.toFixed(2);
+    }
+
+    function hideStatus() {
+        window.status = no;
+    }
+</script>  
+</body>
+<!-- InstanceEnd --></html>

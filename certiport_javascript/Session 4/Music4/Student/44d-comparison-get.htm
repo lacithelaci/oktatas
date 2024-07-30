@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><!-- InstanceBegin template="/Templates/Design Template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+    <meta charset="utf-8" />
+
+    <!-- InstanceBeginEditable name="docname" -->
+    <title>The Music Store - Item Comparison</title>
+    <!-- InstanceEndEditable -->
+    
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+
+    <!-- InstanceBeginEditable name="headscripts" -->
+    
+    <!-- InstanceEndEditable -->
+
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:Order msdt:dt="string">399845400.000000</mso:Order>
+<mso:ContentTypeId msdt:dt="string">0x0101009F1A1A9B9131484CB900844943E1876F</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+   <section id="main">
+	   	<section id="main_content">
+  			<header>
+  				<div id="sitelogo">
+					<a href="index.html"><img src="images/logo.png" alt="The Music Store"/></a>
+				</div>
+    <!-- InstanceBeginEditable name="pagecontents" -->
+    			<div id="headerinfo">
+					<p>&nbsp;</p>
+					<p>Call now: <span style="font-size: 1.5em;">800.555.3839</span></p>
+ 				</div>
+	    	</header>
+
+<!-- End Header -->
+
+<!-- Begin Content -->
+
+
+	        <h1>Comparisons</h1>
+	        
+            <input type="button" class="buttons" value="Get Images" onclick="getImages();"/>
+            <input type="button" class="buttons" value="Get Social Classes" onclick="getClasses();"/>
+            <input type="button" class="buttons" value="Change Heading" onclick="setAltHeadingClass();"/>
+            <input type="button" class="buttons" value="Create Element" onclick="addConstructionMsg();"/>
+
+            <p id="output">Output:</p>
+
+        	
+
+    <!-- InstanceEndEditable -->
+
+<!-- End Content -->
+
+
+	   </section>
+   </section>
+
+
+<!-- Begin Footer -->
+
+	   <footer>
+			<p><a href="index.html">Home</a> | <a href="products.htm">Products</a> | <a href="lessons.htm">Lessons</a> | <a href="contact.htm">Contact Us</a></p>
+
+       		<p>Copyright &copy; 2017 The Music Store, 1000 Broadway, Salt Lake City, UT 84103</p>
+
+       		<p class="social"><img src="images/icon_facebook.png" alt="Facebook"/><img src="images/icon_googleplus.png" alt="Google+"/><img src="images/icon_linkedin.png" alt="LinkedIn"/><img src="images/icon_twitter.png" alt="Twitter"/><img src="images/icon_youtube.png" alt="YouTube"/><img src="images/icon_rss.png" alt="RSS"/></p>
+	   </footer>
+
+    <script>
+        function getImages() {
+            var imgList = document.getElementsByTagName("img");
+            for (var i = 0; i < imgList.length; i++) {
+                document.getElementById('output').innerHTML += "<br />" + imgList[i].src;
+            }
+        }
+
+        function getClasses() {
+            var classList = document.getElementsByClassName("social");
+                document.getElementById('output').innerHTML += "<br />" + classList.length;
+        }
+
+        function setAltHeadingClass() {
+            document.getElementsByTagName("h1")[0].// set the class to altheading
+        }
+
+        function addConstructionMsg() {
+            var constructionP = document.// create a paragraph element
+            var constructionText = document.// add this text node("This page is under construction. " +
+                "We're not actually comparing instruments right now.");
+            constructionP.// add text node to variable (constructionText);
+            document.getElementById('sitelogo').// add variable to element (constructionP);
+        }
+        
+    </script>
+
+</body>
+<!-- InstanceEnd --></html>
