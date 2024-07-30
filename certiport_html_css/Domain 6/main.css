@@ -1,0 +1,41 @@
+﻿body {
+    font-family:'Segoe UI', Tahoma, sans-serif;
+    background-color: #f7d2aa;
+}
+p {
+    color: navy;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-variant: small-caps;
+}
+
+/* The background color is extending across the page,
+    so I have commented it out for now. */
+figcaption {
+    color: navy;
+    font-weight: bold;
+    /*background-color: #AAEEFF;*/
+}
+.sale {
+    font-weight: bold;
+    background-color: #AAEEFF;
+}
+#sidenote {
+    background-color: #DDDDDD;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    font-family: 'Palatino Linotype','Times New Roman', serif;
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        background-color: white;
+    }
+}
