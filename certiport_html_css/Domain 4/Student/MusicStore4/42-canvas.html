@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <canvas id="canvasTest" width="200" height="200" style="border: 2px solid black;"></canvas>
+    
+    
+    <script type="text/javascript">
+    function loadCanvas() {
+        var cvs = document.getElementById("canvasTest");
+        context = cvs.getContext("2d");
+        context.font = "12pt Arial";
+        context.fillText("THE Music Store", 10, 140);
+
+        var grad = context.createLinearGradient(0, 0, 100, 0);
+        grad.addColorStop(0.25, "rgb(255,100,255)");
+        grad.addColorStop(0.75, "rgb(0,155,0)");
+
+
+        context.fillStyle = grad;
+        context.fillRect(10, 20, 100, 100)
+
+    }
+    </script>
+</body>
+</html>
