@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout Example</title>
+    <style>
+        body {
+            background-color: blanchedalmond;
+            margin: 0 auto;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            font-size: 3em;
+            text-align: center;
+        }
+
+        #grid-container {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        #grid-container > div {
+            background-color: lightgrey;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="grid-container">
+        <div>Box 1</div>
+        <div>Box 2</div>
+        <div>Box 3</div>
+        <div>Box 4</div>
+        <div>Box 5</div>
+        <div>Box 6</div>
+    </div>
+</body>
+</html>
