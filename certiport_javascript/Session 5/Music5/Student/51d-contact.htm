@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><!-- InstanceBegin template="/Templates/Design Template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+    <meta charset="utf-8" />
+
+    <!-- InstanceBeginEditable name="docname" -->
+    <title>The Music Store - Item Comparison</title>
+    <!-- InstanceEndEditable -->
+    
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+
+    <!-- InstanceBeginEditable name="headscripts" -->
+    
+    <!-- InstanceEndEditable -->
+
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:Order msdt:dt="string">399846600.000000</mso:Order>
+<mso:ContentTypeId msdt:dt="string">0x0101009F1A1A9B9131484CB900844943E1876F</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+   <section id="main">
+	   	<section id="main_content">
+  			<header>
+  				<div id="sitelogo">
+					<a href="index.html"><img src="images/logo.png" alt="The Music Store"/></a>
+				</div>
+    <!-- InstanceBeginEditable name="pagecontents" -->
+    			<div id="headerinfo">
+					<p>&nbsp;</p>
+					<p>Call now: <span style="font-size: 1.5em;">800.555.3839</span></p>
+ 				</div>
+	    	</header>
+            
+<!-- End Header -->
+
+<!-- Begin Content -->
+
+
+	        <h1>Registration Form</h1>
+            <form action="thankyou.htm" method="post" id="contactForm">
+                <fieldset>
+                    <table cellpadding="2">
+                        <tr>
+                            <td>
+                                <label for="location">Location</label>
+                            </td>
+                            <td>
+                                <select name="location" id="location">
+                                    <option value=""></option>
+                                    <option value="Salt Lake City">Salt Lake City</option>
+                                    <option value="Summerlin">Summerlin</option>
+                                </select>
+                            </td>
+                        </tr><tr>
+                            <td>
+                                <label for="firstname">First Name</label>
+                            </td>
+                            <td>
+                                <input type="text" name="firstname" id="firstName" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="lastname">Last Name</label>
+                            </td>
+                            <td>
+                                <input type="text" name="lastname" id="lastName" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="city">City</label>
+                            </td>
+                            <td>
+                                <input type="text" name="city" id="city" onchange="checkCity(this.value);"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="state">State</label>
+                            </td>
+                            <td>
+                                <input type="text" name="state" id="state" onchange="convertUpper(this.value, 'state');"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="zip">Zip</label>
+                            </td>
+                            <td>
+                                <input type="text" name="zip" id="zip" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="email">Email Address</label>
+                            </td>
+                            <td>
+                                <input type="email" name="email" id="email" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="password">Password</label>
+                            </td>
+                            <td>
+                                <input type="text" name="password" id="password" />
+                            </td>
+                        </tr>
+                       </table>
+                </fieldset>
+                <fieldset>
+
+                    <p>How did you hear about us?</p>
+                    <select name="found" id="found">
+                        <optgroup label="Media">
+                            <option value="TV">TV</option>
+                            <option value="Radio">Radio</option>
+                            <option value="Other">Other</option>
+                        </optgroup>
+                        <optgroup label="Web">
+                            <option value="Google">Google</option>
+                            <option value="Bing">Bing</option>
+                        </optgroup>
+                    </select>
+                    <p>What instrument are you most interested in learning?</p>
+                    <input list="instruments" name="instrument" id="instrument"/>
+                    <datalist id="instruments">
+                        <option value="guitar"></option>
+                        <option value="piano"></option>
+                        <option value="drums"></option>
+                        <option value="ukulele"></option>
+                    </datalist>
+                    
+                    <p>How many hours a week do you play an instrument now?</p>
+                    <input type="number" size="3" value="hoursPlayed" id="hoursPlayed" />
+                    <p>Add comments below</p>
+                    <textarea name="comments" rows="6" cols="50" maxlength="255"></textarea>
+                </fieldset>
+                <input type="button" class="buttons" name="testForm" value="Test form" onclick="fillTestResults();"/>
+                <input type="submit" class="buttons" name="submitform" value="Send it" /> <br />
+                
+            </form>
+            
+            <p id="testResults">&nbsp;</p>
+        	
+
+    <!-- InstanceEndEditable -->
+
+<!-- End Content -->
+
+
+	   </section>
+   </section>
+
+
+<!-- Begin Footer -->
+
+	   <footer>
+			<p><a href="index.html">Home</a> | <a href="products.htm">Products</a> | <a href="lessons.htm">Lessons</a> | <a href="contact.htm">Contact Us</a></p>
+
+       		<p>Copyright &copy; 2017 The Music Store, 1000 Broadway, Salt Lake City, UT 84103</p>
+
+       		<p class="social"><img src="images/icon_facebook.png" alt="Facebook"/><img src="images/icon_googleplus.png" alt="Google+"/><img src="images/icon_linkedin.png" alt="LinkedIn"/><img src="images/icon_twitter.png" alt="Twitter"/><img src="images/icon_youtube.png" alt="YouTube"/><img src="images/icon_rss.png" alt="RSS"/></p>
+	   </footer>
+
+    <script>
+        function fillTestResults() {
+            var testResults = document.getElementById('testResults');
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            var found = document.getElementById('found').value;
+            testResults.innerHTML = "You entered " + firstName + " " + lastName
+                + " for a name. You found us via " + found + ".";
+        }
+
+        function fillState(location) {
+            var state = document.getElementById('state');
+            if (state.value == '') {
+                // add city and state logic
+                }
+            }
+        }
+
+        function convertUpper(text, field) {
+            document.getElementById(field).value = text.toUpperCase();
+        }
+
+        function checkCity(city) {
+
+            if (city == 'Las Vegas' || city == 'North Las Vegas' || city == 'Henderson') {
+                document.getElementById('testResults').innerHTML = 'The Summerlin location will open in 2018';
+            }
+
+        }
+        function checkFields() {
+            if (document.getElementById('firstName').value == '' ||
+                document.getElementById('lastName').value == '') {
+                alert('One or more required name fields is empty');
+            }
+        }
+        
+    </script>
+
+</body>
+<!-- InstanceEnd --></html>
