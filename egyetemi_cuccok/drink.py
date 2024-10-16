@@ -1,6 +1,9 @@
 from __future__ import annotations
 
+from functools import total_ordering
 
+
+@total_ordering
 class Drink:
     nev: str
     _kiszereles: str
@@ -17,11 +20,11 @@ class Drink:
     def __str__(self) -> str:
         return f"{self.nev}, {self.kiszereles}, {self.ar} Ft"
 
-    def __eq__(self, other) -> bool:
+    def __eq__(self, other: Drink) -> bool:
         return isinstance(other,
                           Drink) and self.ar == other.ar and self.nev == other.nev and self.kiszereles == other.kiszereles
 
-    def __lt__(self, other) -> bool:
+    def __lt__(self, other: Drink) -> bool:
         if not isinstance(other, Drink):
             return NotImplemented
         if self.ar != other.ar:
@@ -31,7 +34,7 @@ class Drink:
         return self.nev < other.nev
 
     @staticmethod
-    def milyen_kiszerelesben_talalhato(lista: list[Drink], nev) -> str:
+    def milyen_kiszerelesben_talalhato(lista: list[Drink], nev: str) -> str:
         for i in lista:
             if i.nev == nev:
                 return i.kiszereles
@@ -42,11 +45,11 @@ class Drink:
         return len(set(i.kiszereles for i in lista))
 
     @staticmethod
-    def dragabb_italszam(lista: list[Drink], ar) -> int:
+    def dragabb_italszam(lista: list[Drink], ar: int) -> int:
         return len([i for i in lista if i.ar > ar])
 
     @staticmethod
-    def dragabb_kiszereles(lista: list[Drink], ar) -> int:
+    def dragabb_kiszereles(lista: list[Drink], ar: int) -> int:
         return len(set(i.kiszereles for i in lista if i.ar > ar))
 
     @staticmethod
@@ -104,7 +107,7 @@ class Szeszesital(Drink):
         return f"{super().__repr__()}, {self.alkohol}"
 
     def __str__(self) -> str:
-        return f"{self.alkohol}% alkoholtartalmú {super().__repr__()}"
+        return f"{self.alkohol}% alkoholtartalmú {super().__repr__()} Ft"
 
     @property
     def alkohol(self) -> float:
