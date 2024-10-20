@@ -67,10 +67,7 @@ class Drink:
     def kiszereleshez_nevek(lista: list[Drink]) -> dict[str, set[str]]:
         szotar = {}
         for i in lista:
-            if i.kiszereles not in szotar:
-                szotar[i.kiszereles] = set()
-            else:
-                szotar[i.kiszereles].add(i.nev)
+            szotar.setdefault(i.kiszereles, set()).add(i.nev)
         return szotar
 
     @staticmethod
