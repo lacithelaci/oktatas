@@ -1,0 +1,3 @@
+sudo chmod 751 log
+sudo adduser user
+sudo chown user:users log
