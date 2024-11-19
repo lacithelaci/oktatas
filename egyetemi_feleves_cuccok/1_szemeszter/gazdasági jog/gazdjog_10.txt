@@ -1,0 +1,161 @@
+2. cégnév
+Kötelező elemei
+– Vezérszó + Cégforma 
+– Nonprofit jelleg (Közhasznú jogállás)
+–Toldatok (b.a., cs.a, v.a. kt.a. f.a.)
+Szabadon választott elem
+– Tevékenységre utalás
+Rövidített cégnév: 
+Vezérszó + Cégforma rövidítve
+Cégnévvel szembeni követelmények
+	Egyértelmű különbözőség írásban és hangzásban (cégek, 
+közhatalmi, közig. szervek hivatalos és köznyelvi 
+elnevezésétől)
+Cégkizárólagosság
+	Ne legyen megtévesztő, a valóságos helyzetet tükrözze
+Cégvalódiság
+	Magyarul, a magyar helyesírás szabályai szerint 
+(vezérszón kívül)
+3. A társaság tagjai 
+- Legalább 2 tag, 
+kivéve: egyszemélyes Gt (!) 
+Elnevezés: Rt – részvényes
+- A társaság tagjai: 
++ Természetes személy vagy jogi 
+személy
++ Belföldi vagy külföldi jogállású tagok 
+- Tagok adatait fel kell tüntetni!
+- Csendes társaság?
+- Stróman?
+4. Székhely
+- székhely: a központi ügyintézés helye
+és a tevékenység végzésének a helye
+székhelyszolgáltatás
+- telephely: (tevékenység végzésének
+helye a székhellyel azonos településen)
+- fióktelep: (tevékenység végzésének
+helye a székhelytől elkülönülő
+településen)
+5. Tevékenységi kör
+tevékenységi kör 
+bármilyen tevékenyég, amit 
+jogszabály nem tilt vagy korlátoz 
+(TEÁOR)
+- főtevékenység 
+- egyéb tevékenységek
+6. képviselet – cégjegyzés 
+Képviselő = vezető tisztségviselő(k)
+Kkt, Bt - ügyvezető(k)
+Kft. - ügyvezető(k)
+Rt. - igazgatóság (legalább 3 fő), 
+Cégjegyzés: cég írásbeli képviselete
+- önálló cégjegyzési jog (a vezető tisztségviselő(k) 
+önállóan jár(nak) el)
+- együttes cégjegyzési jog (a vezető tisztségviselők 
+együttes aláírása szükséges a kötelezettségvállaláshoz, 
+jogok szerzéséhez)
++ aláírási címpéldány - közjegyzővel hitelesített okirat
++ aláírás-minta - ügyvéd által ellenjegyzett okirat
+Cégbejegyzési eljárás
+Cégbíróság jár el
+a) Általános cégeljárás
+– 15 munkanap (bejegyző v. elutasító 
+végzés)
+b) Egyszerűsített cégeljárás
+- Szerződésminta (kivéve Nyrt.) 
+- 1 munkanapon belüli döntés (hiánypótlás 
+nincs)
+Előtársaság 
+(b.a. = bejegyzés alatt toldat)
+Két szakasz
+1. ellenjegyzéstől – a cégiratok benyújtásig 
+(adószám megállapítása- tanúsítvány
+kiadása) 
++ gazdasági tevékenységet nem 
+folytathat
+2. Tanúsítvány kiadásától – bejegyzésig 
+vagy elutasításig
++ gazdasági tevékenység végezhető
+Adóregisztrációs eljárás
+Adószám megállapítását megelőző NAV eljárás
+Cél: gazdasági társaság alapításának a megakadályozása
+vagy más társaságokba tulajdonosként, képviselőként
+való belépés kiszűrése.
+- a jelentős adótartozást felhalmozó vagy adószámtörléssel érintett társaságokban képviselőként vagy
+tulajdonosként érintett magánszemélyek
+- 180 napon keresztül fennálló, 5 millió forintot meghaladó 
+adótartozással rendelkezik, 
+- Korábbi cége 5 éven belül 5 millió forintot meghaladó adótartozással 
+jogutód nélkül szűnt meg, 
+- a társaság adószámát az adóhatóság 5 éven belül szankciós 
+jelleggel törölte. 
+Megtagadás: az adózó vezető tisztségviselője, 50%-os
+szavazatot meghaladó mértékű tagja esetén
+Felelősség előtársaság esetén 
+Elutasító végzés
+a) Azonnali működés megszüntetési kötelezettség
+- Szerződésszegésért való felelősség
+b) Vállalt kötelezettségeket teljesíteni kell
+1. Társaság vagyonából
+2. (ha nincs a társaságnak vagyona)
+- Korlátlanul felelős tagok (kkt, bt) 
+- Korlátozott tagi felelősség esetén (kft, rt): 
+vezető tisztségviselő (VTV) felel (objektív 
+felelősség) a társaság hitelezőivel szemben
+Gazdasági társaságok szervezete
+Kötelező szervek
+Legfőbb szerv 
+stratégiai irányítás
+kkt., bt. - tagok gyűlése
+kft. - taggyűlés
+rt. - közgyűlés
+Vezető tisztségviselő
+operatív irányítás
+kkt, bt. - ügyvezető
+kft. – ügyvezető
+Rt. – testületi vezetés
+	igazgatóság
+	vezérigazgató vagy igazgatótanács
+Opcionális szervek 
+(esetenként kötelező)
+Felügyelőbizottság 
+Ellenőrző 
+szerv a tulajdonosok érdekében 
+Ügyvezetés ellenőrzése
+Könyvvizsgáló 
+közérdekvédelmi ellenőrző szerv
+Számviteli nyilvántartás ellenőrzése
+Legfőbb szerv
+Részt vevő köre:
+- tagok összessége – szavazati jog (!)
+- meghívottak: VTV/FB tanácskozási 
+joggal
+Ki hívja össze?
+- összehívás: VTV, 
+- kezdeményezheti: FB, könyvvizsgáló, 
+kisebbségi tulajdonosok (5%)
+Legfőbb szerv hatásköre
+- létesítő okirat módosítás
+- éves beszámoló elfogadása
+- döntés osztalék (előleg) fizetésről
+- vezető tisztségviselők választása, díjázása, 
+visszahívása,
+- felügyelő bizottság, könyvvizsgáló választása, díjazása, 
+visszahívása
+- jegyzett tőke felemelése, leszállítása
+- tag kizárás
+- átalakulás, egyesülés, szétválás
+- jogutód nélküli megszűnés
+Legfőbb szerv ülése
+A legfőbb szerv ülése
+- (éves) rendes vagy rendkívüli ülés
+- Meghívó (hirdetmény): 
+- ülés helye, ideje,napirendi pontok, 
+megismételt ülés ideje
+A legfőbb szerv tartásának módjai:
+- hagyományos (személyesen v. képviselő útján)
+- konferencia-ülés, 
+- írásbeli döntés-levélszavazás (nyrt-nem) 
+- szabályszerű összehívás nélkül (minden tag jelen 
+van)
+

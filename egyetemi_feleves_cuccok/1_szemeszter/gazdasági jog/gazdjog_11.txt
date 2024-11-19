@@ -1,0 +1,367 @@
+Legfőbb szerv 
+határozatképessége- határozathozatal
+Szavazat: vagyoni hozzájárulás arányában!
+Határozatképesség
+• Leadható szavazatok több, mint fele jelen van, 
+- Megismételt legfőbb szerv ülése (jelenlévők 
+számára tekintet nélkül határozatképes)
+Határozathozatal
++ egyszerű (50%+1 szavazat)
++ minősített szótöbbség (75% többség)
++ egyhangú
+vezető tisztségviselő (VTV)
+Kkt, Bt - ügyvezető
+Kft. - ügyvezető
+Rt. - igazgatóság (min. 3 tagú testület)
+Zrt. - vezérigazgató
+Nyrt. - dualista (igazgatóság+FB)
+- monista (igazgatótanács)
+VTV személye
+• Csak cselekvőképes természetes személy 
+- Kkt. - Bt.Tagok közül
+- Kft.- Rt. Lehet tag és lehet más 
+személy is
+• Nincs kizáró ok:
+Kizáró okok
+Büntetőjog (bíróság)
+• bármilyen bűncselekmény elkövetése miatt -
+szabadságvesztés büntetés 
+• Foglalkozástól eltiltás – főtevékenység
+• Vezető tisztségviselői tevékenységtől eltiltás
+korábbi céggel kapcsolatosan Cégbíróság eltiltja (5 évre)
+– Felszámolási eljárásban hitelezőkkel szembeni felelőssége 
+megállapítása ellenére nem teljesítette a fizetési kötelezettségét
+– Kényszertörlési eljárás
+– Vezető tisztségviselő a vele szembeni pénzbírságot nem fizette 
+be
+Jogkövetkezmény: tv erejénél fogva megszűnik a tisztségVezető tisztségviselő jogállása
+• Munkaviszony vagy megbízási jogviszony
+• Határozott (max. 5 év) vagy határozatlan idő, 
+újraválasztható, visszahívható
+• Csak személyesen láthatja el, képviseletnek 
+nincs helye
+• Egy személy több társaság VTV-je is lehet, 
+írásbeli tájékoztatás (összeférhetetlenség)
+• Képesítési követelmények nincsenek, tagok 
+választják, bizalmi jogviszony
+Összeférhetetlenség
+1. Részesedésszerzési tilalom
+- Nem lehet tag azonos főtevékenységű gazdálkodó 
+szervezetben (kivéve: nyrt)
+2. Tisztségviselési tilalom
+- nem lehet VTV azonos főtevékenységű gazdasági 
+társaságban
+3. Ügyletkötés korlátozása
+- nem köthet saját nevében és javára olyan ügyletet, 
+ami a társaság tevékenységi körébe tartozik
+4. VTV és közeli hozzátartozója ugyanott FEB tag, 
+könyvvizsgáló nem lehet
+VTV feladatai
+A) Belső ügyek intézése = ügyvezetés
+• Határozatok végrehajtása
+• Bejelentési, adatszolgáltatási kötelezettség teljesítése
+• Tájékoztatási kötelezettség a tagok részére
+• Munkáltatói joggyakorlás
+B) Külső ügyek intézése = Képviselet – cégjegyzés
+– 3. személyekkel való szerződéskötés
+– Közvetlenül a társaságot kötelezi, jogosítja
+Cégjegyzés: önálló - együttes 
+aláírási-címpéldány - közjegyzői hitelesítés
+aláírás-minta - ügyvéd által ellenjegyzett 
+VTV jogviszony megszűnése
+• Határozott idő leteltével
+• Visszahívással
+– Bármikor, indoklás nélkül
+• Kizáró / összeférhetetlenségi ok bekövetkezte
+• Lemondással
+– Bármikor, de ha a működőképesség megkívánja a 60. 
+napon válik hatályossá
+• Halál
+• Cselekvőképesség elvesztése
+Vezető tisztségviselő felelőssége
+I. saját társaságával szembeni felelősség 
+(belső)
+II. 3. személlyel (hitelezővel) szembeni 
+felelősség (külső: kivételes esetekben, hiszen 
+az okozott kárért a társaság köteles helyt állni!)
+a) szándékos károkozás (egyetemlegesség)
+b) jogszerűtlen gazdálkodásért való
+hitelezőkkel szembeni felelősség (wrongful
+trading)
+c) előtársasági időszakhoz kapcsolódó 
+felelősség
+VTV felelőssége saját társaságával 
+szemben 
+• társaság érdekeinek elsődlegessége; a jogszabályok, létesítő okirat,
+legfőbb szerv határozatai alapján köteles eljárni.
+• tevékenysége során kárt okoz a társaságnak, köteles azt
+a társaság felé megtéríteni!
+Mentesül a felelősség alól, ha bizonyítja, hogy a kárt
+– ellenőrzési körén kívül eső, 
+– a szerződéskötés időpontjában előre nem látható 
+körülmény okozta, és 
+– nem volt elvárható, hogy a körülményt elkerülje vagy a kárt 
+elhárítsa.
+a) Szándékos károkozás esetén: teljes kár megtérítése
+b) Nem szándékos: csak a társaság vagyonában keletkezett kárt kell
+megtérítenie - az elmaradt vagyoni előnyt (előreláthatósági klauzula)
+csak olyan mértékben kell megtérítenie, amilyen mértékben a kár az
+adott ügyvezetői tevékenység időpontjában előrelátható volt.
+felmentvény
+Legfőbb szerv értékeli a VTV előző üzleti évben kifejtett 
+tevékenységét
+az ügyvezetési tevékenység megfelelő = felmentvény 
+megadásáról
+Felmentvény megadásának jelentősége
+• Kártérítési igény nem érvényesíthető a vezetővel szemben 
+• Kivéve, valótlan, hiányos adatok alapján részesült felmentvényben
+jogszerűtlen gazdálkodásért való hitelezőkkel 
+szembeni felelősség
+(Wrongful trading)
+• Az általa irányított társaság fizetésképtelenséggel
+fenyegető helyzete - hitelezői érdekek figyelmen
+kívül hagyása (pl. egyik hitelező előnyben
+részesítése a másik kárára vagy tulajdonosi érdek
+előtérbe helyezése)
+• Felszámolással (jogutód nélkül) megszűnik a cég és 
+hitelezők követelése nem térül meg
+Jogkövetkezménye:
+• Hitelezők kielégítetlen követelésük erejéig kártérítési 
+igényt érvényesíthetnek peres eljárásban a VTV-vel
+szemben!
+VTV felelőssége előtársasági 
+szakaszban
+Cégbejegyzés elutasítása esetén
+kft, rt. esetén érvényesül
+a társaság vagyona által nem fedezett hitelezői 
+igények kielégítése a VTV magánvagyonából
+objektív felelősség, kimentés nélkül
+Felügyelőbizottság
+Jogköre:
+• Ügyvezetés ellenőrzése 
+- függetlenek, nem utasíthatóak az ügyvezetők által
+• számviteli beszámolóról írásbeli jelentés a tagok 
+számára
+• iratbetekintés, felvilágosítás kérése
+• megvizsgálhatja a társaság pénztárát, fizetési számláját, 
+áruállományát, szerződéseit
+Kötelező létrehozása
+- munkavállalói létszám 200 főt meghaladja, 
+FB 1/3-ád a munkavállalókból kell választani
+- Nyrt. dualista irányítása esetén
+Állandó könyvvizsgáló
+Feladata:
+- könyvvizsgálat szabályszerű elvégzése,
+- beszámoló jogszabályi megfelelősége és megbízható, 
+valós képet ad a pénzügyi helyzetről 
+- független, tárgyilagos ellenőrzés
+Kötelező esete: 
+– számviteli törvény előírja: minden kettős könyvvitelt 
+vezető vállalkozás: kivéve:
+• Árbevétel: (éves) 300millió Ft alatt,
+• Létszám: 50 fő alatt
+– Közérdek védelme indokolja (MNB, MNV Zrt.)
+– Nyrt.
+Az egyes gazdasági társaságok
+• Közkereseti társaság (Kkt.)
+• Betéti társaság (Bt.)
+Közkereseti társaság
+fogalma:
+Tagok (legalább 2 személy), közös 
+üzletszerű gazdasági tevékenysége
+Társasági szerződés/szerződésminta
+Tagok (alapítók) köre
+természetes személy vagy jogi személy
+Kivéve:
+Felelősséghalmozás
+Kiskorú természetes személy
+Kkt. jegyzett tőkéje
+- Kötelező vagyoni hozzájárulást teljesíteni 
+(Pénzbeli hozzájárulás vagy apport)
+- A tagok vagyoni hozzájárulásának nincs 
+minimuma
+- végleges vagyonátruházás – társaság 
+illetve a tagsági viszony fennállása alatt nem lehet 
+visszakövetelni 
+- nyereség viselésének alapja 
+- vagyoni hozzájárulás nem teljesítése –
+felszólítás – tagsági viszony megszűnik!
+- Jegyzett tőke minimális nagysága nincs 
+meghatározva
+helytállási kötelezettség a 
+társaság tartozásaiért 1.
+Elsődleges: közkereseti társaság korlátlan 
+helytállási kötelezettsége - saját vagyonával 
+Másodlagos: társaság tagjai: 
+• mögöttes (ha a kkt. vagyona nem elegendő)
+• korlátlan (saját magánvagyonával felel a kkt. 
+hitelezőivel szemben)
+• egyetemleges (bármely tagtól követelhető a 
+teljes tartozás megfizetése)
+helytállási kötelezettség a 
+társaság tartozásaiért 2.
+a) belépő tag helytállási kötelezettsége: 
+- felel - többi taggal azonos módon 
+- kivéve: TSZ eltérhet, 3. személlyel szemben 
+hatálytalan
+b) társaságtól megváló tag helytállási 
+kötelezettsége: 
+- 5 évig felel a megszűnés előtti tartozásokért
+c) meghalt tag örökösének helytállási 
+kötelezettsége: 
+- örökrész erejéig 
+- vagy a társaság tagjaival megegyezve belép
+Közkereseti társaság 
+szervezete
+Legfőbb szerv:
+- tagok gyűlése (formális- informális)
++ minden tagnap legalább 1 szavazata van
++ egyszerű, minősített, egyhangú döntés
+Vezető tisztségviselő:
+- ügyvezető - csak a tagok közül választható!
+- mindegyik tag jogosult – időbeli korlátozás nélkül
+- egy vagy több tag, 
++ cégjegyzés önálló vagy együttes
+Tagsági viszony megszűnése
+a) vagyoni hozzájárulás felszólítás ellenére sem történő teljesítése
+b) tagok közös megegyezése
+c) tag rendes felmondás
+3 hónapra, írásban, indoklás nincs 
+d) tag azonnali hatályú felmondás
+írásban, ok megjelölése: más tag a TSZ súlyosan megszegi vagy 
+olyan magatartás, amely vele való együttműködést vagy a társaság 
+célját veszélyezteti
+e) társasági részesedés átruházása – TSZ módosítás
+f) tag kizárás
+társaságban maradása nagy mértékben veszélyezteti a társaság 
+céljainak elérését - legfőbb szerv ¾-es határozata - tag ellen - 15 
+napon belül kereset- bíróság ítélet
+g) tag halála, vagy megszűnése
+h) tagsági viszony fenntartása jogszabályba ütközik
+Elszámolás tagsági jogviszony 
+megszűnése esetén
+Elszámolási kötelezettség 
+• Volt taggal - (halála esetén) örökösével
+• Kivéve, ha a részesedés átruházására került sor
+Elszámolás módja
+• Társasági vagyon értékének megállapítása a megszűnés 
+időpontjában
+• A tagi vagyoni hozzájárulással arányos részt kell kiadni
+• 3 hónapon belül pénzben kifizetni
+Társaság megszűnése
+a) tagok száma 1 főre csökken és 6 hónapon belül nem 
+jelentenek be új tagot - az egyedüli tag – ügyvezetésre 
+jogosult tag
+b) jogutód nélküli megszűnés
+– végelszámolás,
+– Felszámolás
+c) Jogutódlással történő megszűnés
+– Átalakulás, egyesülés, szétválás
+– Kkt. és bt. közötti „átalakulás” - Társasági szerződés 
+módosításával az átalakulási szabályok alkalmazása 
+nélkül
+Betéti társaság
+fogalma:
+Tagok (legalább 2 személy – legalább 1 
+beltag és legalább 1 kültag), közös 
+üzletszerű gazdasági tevékenysége
+Társasági szerződés/szerződésminta
+Tagok (alapítók) köre
+• Beltag:
+természetes személy vagy jogi személy
+Kivéve:
+Felelősséghalmozás
+Kiskorú természetes személy
+• Kültag:
+természetes személy vagy jogi személy
+(Korlátozás nincs)
+Bt. jegyzett tőkéje
+- Kötelező vagyoni hozzájárulást teljesíteni 
+(Pénzbeli hozzájárulás vagy apport)
+- A tagok (sem beltag, sem kültag) vagyoni 
+hozzájárulásának nincs minimuma
+- végleges vagyonátruházás – társaság illetve a 
+tagsági viszony fennállása alatt nem lehet 
+visszakövetelni 
+- nyereség viselésének alapja 
+- vagyoni hozzájárulás nem teljesítése –
+felszólítás – tagsági viszony megszűnik
+- Jegyzett tőke minimális nagysága nincs 
+meghatározva.
+helytállási kötelezettség a 
+társaság tartozásaiért
+Elsődleges: betéti társaság korlátlan helytállási 
+kötelezettsége - saját vagyonával 
+Másodlagos: társaság beltagja(i): 
+• mögöttes (ha a Bt. vagyona nem elegendő)
+• korlátlan (saját magánvagyonával felel a Bt. 
+hitelezőivel szemben)
+• egyetemleges (ha több beltag van) - bármely 
+tagtól követelhető a teljes tartozás megfizetése)
+kültag: helytállási kötelezettsége nincs – csak a 
+vagyoni hozzájárulás szolgáltatása
+helytállási kötelezettség a 
+társaság tartozásaiért 2.
+a) belépő beltag helytállási kötelezettége: 
+- felel - többi taggal azonos módon 
+- kivéve: TSZ eltérhet, 3. személlyel szemben 
+hatálytalan
+b) társaságtól megváló beltag helytállási 
+kötelezettége: 
+- 5 évig felel a megszűnés előtti tartozásokért
+c) meghalt beltag örökösének helytállási 
+kötelezettége: 
+- örökrész erejéig 
+- vagy a társaság tagjaival megegyezve belép
+Betéti társaság szervezete
+Legfőbb szerv:
+- tagok gyűlése (formális- informális)
++ minden tagnap legalább 1 szavazata van
++ egyszerű, minősített, egyhangú döntés
+Vezető tisztségviselő:
+- ügyvezető - csak a tagok közül választható! 
+(általában a beltag, de lehet kültag is)
+- mindegyik tag jogosult – időbeli korlátozás nélkül
+- egy vagy több tag, cégjegyzés önálló vagy együttes
+Tagsági (beltag- kültag) viszony 
+megszűnése
+a) vagyoni hozzájárulás felszólítás ellenére sem történő teljesítése
+b) tagok közös megegyezése
+c) tag rendes felmondás
+3 hónapra, írásban, indoklás nincs 
+d) tag azonnali hatályú felmondás
+írásban, ok megjelölése: más tag a TSZ súlyosan megszegi vagy 
+olyan magatartás, amely vele való együttműködést vagy a társaság 
+célját veszélyezteti
+e) társasági részesedés átruházása – TSZ módosítás
+f) tag kizárás
+társaságban maradása nagy mértékben veszélyezteti a társaság 
+céljainak elérését - legfőbb szerv ¾-es határozata - tag ellen - 15 
+napon belül kereset- bíróság ítélet
+g) tag halála, vagy megszűnése
+h) tagsági viszony fenntartása jogszabályba ütközik
+Elszámolás tagsági jogviszony 
+megszűnése esetén
+Elszámolási kötelezettség 
+• Volt taggal – (halála esetén) örökösével
+• Kivéve, ha a részesedés átruházására került sor
+Elszámolás módja
+• Társasági vagyon értékének megállapítása a megszűnés 
+időpontjában
+• A tagi vagyoni hozzájárulással arányos részt kell kiadni
+• 3 hónapon belül pénzben kifizetni
+Társaság megszűnése
+a) tagok száma 1 főre csökken és 6 hónapon belül nem 
+jelentenek be új tagot - az egyedüli tag – ügyvezetésre 
+jogosult tag
+b) jogutód nélküli megszűnés
+– végelszámolás,
+– Felszámolás
+c) Jogutódlással történő megszűnés
+– Átalakulás, egyesülés, szétválás
+– Kkt. és bt. közötti „átalakulás” - Társasági szerződés 
+módosításával az átalakulási szabályok alkalmazása 
+nélkül.
+
+
+
