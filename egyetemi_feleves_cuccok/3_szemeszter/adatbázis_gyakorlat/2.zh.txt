@@ -1,0 +1,50 @@
+---1
+create table Allamforma(
+F_id numeric(6) primary key,
+orszag VARCHAR2(50),
+azon numeric(5) references o_orszagok(azon),
+forma varchar2(50) not null check (forma = 'köztársaság' or forma = 'monarchia'));
+
+---2
+insert into Allamforma values(4,'Vatikan', 194, 'köztársaság');
+insert into Allamforma values(5, 'Svájc', 229,'köztársaság');
+
+---3
+update Allamforma
+set forma = 'monarchia'
+where orszag = 'Svajc';
+
+---4
+delete from Allamforma
+where forma = 'köztársaság';
+
+---5
+select o.foldresz, sum(bronz)as atlag_bronz
+from o_orszagok o, o_erem_tabla
+where o.azon = o_erem_tabla.orszag_azon
+group by o.foldresz;
+
+---6
+select orszag
+from o_orszagok
+where terulet < (select avg(terulet)
+                from o_orszagok)
+order by orszag desc;
+
+---7
+select nev, szul_dat
+from o_versenyzok
+where szul_dat < (select v.szul_dat
+                from o_versenyzok v
+                where v.nev = 'Madaras Norbert')
+order by szul_dat asc;
+
+---8
+select e.orszag, e.foldresz
+from o_orszagok e
+where e.foldresz = 'Európa' and lakossag < all(select a.orszag, a.lakossag
+                                from o_orszagok a
+                                where a.foldresz = 'Afrika')
+order by lakossag desc;
+
+                                
