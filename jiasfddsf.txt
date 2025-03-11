@@ -2,7 +2,8 @@ Miért: A kapcsolatépítés rettentően fontos az egyetemi évek alatt, kényel
 
 Mit: A kezdetekben csak a Debreceni Egyetemre fókuszálnánk, hosszútávú terveinkbe tartozik az ország többi egyetemére való terjeszkedés is.
 
-Mivel: Rendelkezünk webfejlesztési ismeretekkel is; humánerőforrásunk, ugyanis 5-en dolgozunk a projekten egyszerre minden hétvégén; vannak szervergépeink illetve laptopok mint eszközök
+Mivel: Rendelkezünk webfejlesztési ismeretekkel is; humánerőforrásunk, 
+ugyanis 5-en dolgozunk a projekten egyszerre minden hétvégén; vannak szervergépeink illetve laptopok mint eszközök
 
 Hogyan: Non-profit szervezet vagyunk. Kizárólag 18 év felett lehet használni az applikációt, illetve el kell fogadni a Felhasználási feltételeket.
 
