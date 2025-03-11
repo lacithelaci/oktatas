@@ -15,7 +15,7 @@ Mikor: 6 fázisban oldanánk meg:
 3. Designolás, rendszertervezés (1-2 hét)
 - Vázlatkészítés az alkalmazáshoz
 - Megfelelő adatbázis kiválasztása
-4. Fejlesztés: konkrét alkalmazás implementálása (2-3 hónap)
+4. Fejlesztés: konkrét alkalmazás implementálása (5-6 hónap)
 - konkrét kód írása
 -adatbázis adatokkal való feltöltése
 -folyamatok fejlesztése
