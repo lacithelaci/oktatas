@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)https://arato.inf.unideb.hu/toth.janos/adatm/s/s05.html -->
+<html lang="hu"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      <meta name="robots" content="noindex, nofollow">
+      <link rel="stylesheet" href="./5_labor_files/style.css">
+      <link rel="stylesheet" href="./5_labor_files/caramelised.css">
+      <title>Adatmenedzsment</title>
+   </head>
+   <body>
+   <script src="./5_labor_files/prettify.js.letöltés"></script>
+   <script src="./5_labor_files/lang-plsql.js.letöltés"></script>
+   <script> document.addEventListener("DOMContentLoaded", function(event) { prettyPrint(); }); </script>
+
+Írjon programot, amely megadja, hogy a vállalat USA-beli telephelyei melyik állam melyik városában vannak! A megvalósításhoz használjon beágyazott táblát!
+<pre class="prettyprint lang-plsql prettyprinted" style=""><code><span class="kwd">DECLARE</span><span class="pln">
+    </span><span class="kwd">TYPE</span><span class="pln"> t_loc_nt </span><span class="kwd">IS</span><span class="pln"> </span><span class="kwd">TABLE</span><span class="pln"> </span><span class="kwd">OF</span><span class="pln"> </span><span class="typ">LOCATIONS%ROWTYPE</span><span class="pun">;</span><span class="pln">
+    v_loc_nt t_loc_nt</span><span class="pun">;</span><span class="pln">
+    v_cid </span><span class="typ">COUNTRIES.COUNTRY_ID%TYPE</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">BEGIN</span><span class="pln">
+    </span><span class="kwd">SELECT</span><span class="pln"> COUNTRY_ID </span><span class="kwd">INTO</span><span class="pln"> v_cid </span><span class="kwd">FROM</span><span class="pln"> COUNTRIES </span><span class="kwd">WHERE</span><span class="pln"> COUNTRY_NAME </span><span class="pun">=</span><span class="pln"> </span><span class="str">'United States of America'</span><span class="pun">;</span><span class="pln">
+
+    </span><span class="kwd">SELECT</span><span class="pln"> </span><span class="pun">*</span><span class="pln">
+    </span><span class="kwd">BULK COLLECT</span><span class="pln"> </span><span class="kwd">INTO</span><span class="pln"> v_loc_nt
+    </span><span class="kwd">FROM</span><span class="pln"> LOCATIONS
+    </span><span class="kwd">WHERE</span><span class="pln"> COUNTRY_ID </span><span class="pun">=</span><span class="pln"> v_cid</span><span class="pun">;</span><span class="pln">
+
+    </span><span class="kwd">FOR</span><span class="pln"> i </span><span class="kwd">IN</span><span class="pln"> </span><span class="lit">1</span><span class="pln"> </span><span class="pun">..</span><span class="pln"> v_loc_nt</span><span class="pun">.</span><span class="fun">COUNT</span><span class="pln">
+    </span><span class="kwd">LOOP</span><span class="pln">
+        DBMS_OUTPUT</span><span class="pun">.</span><span class="pln">PUT_LINE</span><span class="pun">(</span><span class="pln">v_loc_nt</span><span class="pun">(</span><span class="pln">i</span><span class="pun">).</span><span class="pln">CITY </span><span class="pun">||</span><span class="pln"> </span><span class="str">' is in '</span><span class="pln"> </span><span class="pun">||</span><span class="pln"> v_loc_nt</span><span class="pun">(</span><span class="pln">i</span><span class="pun">).</span><span class="pln">STATE_PROVINCE </span><span class="pun">||</span><span class="pln"> </span><span class="str">'.'</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">END</span><span class="pln"> </span><span class="kwd">LOOP</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">END</span><span class="pun">;</span></code></pre>
+
+Hozzon létre egy EMPLOYEES_SEN nevű táblát, amelynek szerkezete megegyezik az EMPLOYEES tábla szerkezetével! Ezt követően írjon programot, amely átmásolja ebbe a táblába azon dolgozók adatait, akik az egyes részlegeken a legrégebben dolgoznak, úgy, hogy a fizetésüket 25%-al növeli! A megvalósításához használjon asszociatív tömböt!
+<pre class="prettyprint lang-plsql prettyprinted" style=""><code><span class="kwd">DROP</span><span class="pln"> </span><span class="kwd">TABLE</span><span class="pln"> EMPLOYEES_SEN</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">CREATE</span><span class="pln"> </span><span class="kwd">TABLE</span><span class="pln"> EMPLOYEES_SEN </span><span class="kwd">AS</span><span class="pln"> </span><span class="kwd">SELECT</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="kwd">FROM</span><span class="pln"> EMPLOYEES </span><span class="kwd">WHERE</span><span class="pln"> </span><span class="lit">1</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">2</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">SELECT</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="kwd">FROM</span><span class="pln"> EMPLOYEES_SEN</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">/</span><span class="pln">
+</span><span class="kwd">DECLARE</span><span class="pln">
+    </span><span class="kwd">TYPE</span><span class="pln"> t_emp </span><span class="kwd">IS</span><span class="pln"> </span><span class="kwd">TABLE</span><span class="pln"> </span><span class="kwd">OF</span><span class="pln"> </span><span class="typ">EMPLOYEES%ROWTYPE</span><span class="pln"> </span><span class="kwd">INDEX</span><span class="pln"> </span><span class="kwd">BY</span><span class="pln"> </span><span class="typ">PLS_INTEGER</span><span class="pun">;</span><span class="pln">
+    v_emp t_emp</span><span class="pun">;</span><span class="pln">
+    v_dept_emp t_emp</span><span class="pun">;</span><span class="pln">
+    v_dept </span><span class="typ">EMPLOYEES.DEPARTMENT_ID%TYPE</span><span class="pun">;</span><span class="pln">
+    idx </span><span class="typ">PLS_INTEGER</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">BEGIN</span><span class="pln">
+    </span><span class="kwd">SELECT</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="kwd">BULK COLLECT</span><span class="pln"> </span><span class="kwd">INTO</span><span class="pln"> v_emp </span><span class="kwd">FROM</span><span class="pln"> EMPLOYEES</span><span class="pun">;</span><span class="pln">
+
+    idx </span><span class="pun">:=</span><span class="pln"> v_emp</span><span class="pun">.</span><span class="fun">FIRST</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">WHILE</span><span class="pln"> idx </span><span class="kwd">IS</span><span class="pln"> </span><span class="kwd">NOT</span><span class="pln"> </span><span class="kwd">NULL</span><span class="pln">
+    </span><span class="kwd">LOOP</span><span class="pln">
+        </span><span class="kwd">BEGIN</span><span class="pln">
+            v_dept </span><span class="pun">:=</span><span class="pln"> v_emp</span><span class="pun">(</span><span class="pln">idx</span><span class="pun">).</span><span class="pln">DEPARTMENT_ID</span><span class="pun">;</span><span class="pln">
+            </span><span class="kwd">IF</span><span class="pln"> v_emp</span><span class="pun">(</span><span class="pln">idx</span><span class="pun">).</span><span class="pln">HIRE_DATE </span><span class="pun">&lt;</span><span class="pln"> v_dept_emp</span><span class="pun">(</span><span class="pln">v_dept</span><span class="pun">).</span><span class="pln">HIRE_DATE
+            </span><span class="kwd">THEN</span><span class="pln">
+                v_dept_emp</span><span class="pun">(</span><span class="pln">v_dept</span><span class="pun">)</span><span class="pln"> </span><span class="pun">:=</span><span class="pln"> v_emp</span><span class="pun">(</span><span class="pln">idx</span><span class="pun">);</span><span class="pln">
+            </span><span class="kwd">END</span><span class="pln"> </span><span class="kwd">IF</span><span class="pun">;</span><span class="pln">
+            idx </span><span class="pun">:=</span><span class="pln"> v_emp</span><span class="pun">.</span><span class="pln">NEXT</span><span class="pun">(</span><span class="pln">idx</span><span class="pun">);</span><span class="pln">
+            </span><span class="kwd">EXCEPTION</span><span class="pln">
+                </span><span class="kwd">WHEN</span><span class="pln"> </span><span class="exc">NO_DATA_FOUND</span><span class="pln"> </span><span class="kwd">THEN</span><span class="pln">
+                    v_dept_emp</span><span class="pun">(</span><span class="pln">v_dept</span><span class="pun">)</span><span class="pln"> </span><span class="pun">:=</span><span class="pln"> v_emp</span><span class="pun">(</span><span class="pln">idx</span><span class="pun">);</span><span class="pln">
+                    idx </span><span class="pun">:=</span><span class="pln"> v_emp</span><span class="pun">.</span><span class="pln">NEXT</span><span class="pun">(</span><span class="pln">idx</span><span class="pun">);</span><span class="pln">
+                </span><span class="kwd">WHEN</span><span class="pln"> </span><span class="exc">VALUE_ERROR</span><span class="pln"> </span><span class="kwd">THEN</span><span class="pln">
+                    idx </span><span class="pun">:=</span><span class="pln"> v_emp</span><span class="pun">.</span><span class="pln">NEXT</span><span class="pun">(</span><span class="pln">idx</span><span class="pun">);</span><span class="pln">
+        </span><span class="kwd">END</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">END</span><span class="pln"> </span><span class="kwd">LOOP</span><span class="pun">;</span><span class="pln">
+
+    idx </span><span class="pun">:=</span><span class="pln"> v_dept_emp</span><span class="pun">.</span><span class="fun">FIRST</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">WHILE</span><span class="pln"> idx </span><span class="kwd">IS</span><span class="pln"> </span><span class="kwd">NOT</span><span class="pln"> </span><span class="kwd">NULL</span><span class="pln">
+    </span><span class="kwd">LOOP</span><span class="pln">
+        v_dept_emp</span><span class="pun">(</span><span class="pln">idx</span><span class="pun">).</span><span class="pln">SALARY </span><span class="pun">:=</span><span class="pln"> v_dept_emp</span><span class="pun">(</span><span class="pln">idx</span><span class="pun">).</span><span class="pln">SALARY </span><span class="pun">*</span><span class="pln"> </span><span class="lit">1.25</span><span class="pun">;</span><span class="pln">
+        </span><span class="kwd">INSERT</span><span class="pln"> </span><span class="kwd">INTO</span><span class="pln"> EMPLOYEES_SEN
+        </span><span class="kwd">VALUES</span><span class="pln"> v_dept_emp</span><span class="pun">(</span><span class="pln">idx</span><span class="pun">);</span><span class="pln">
+        idx </span><span class="pun">:=</span><span class="pln"> v_dept_emp</span><span class="pun">.</span><span class="pln">NEXT</span><span class="pun">(</span><span class="pln">idx</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">END</span><span class="pln"> </span><span class="kwd">LOOP</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">END</span><span class="pun">;</span></code></pre>
+<pre class="prettyprint lang-plsql prettyprinted" style=""><code><span class="kwd">DROP</span><span class="pln"> </span><span class="kwd">TABLE</span><span class="pln"> EMPLOYEES_SEN</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">CREATE</span><span class="pln"> </span><span class="kwd">TABLE</span><span class="pln"> EMPLOYEES_SEN </span><span class="kwd">AS</span><span class="pln"> </span><span class="kwd">SELECT</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="kwd">FROM</span><span class="pln"> EMPLOYEES </span><span class="kwd">WHERE</span><span class="pln"> </span><span class="lit">1</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">2</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">SELECT</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="kwd">FROM</span><span class="pln"> EMPLOYEES_SEN</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">/</span><span class="pln">
+</span><span class="kwd">DECLARE</span><span class="pln">
+    </span><span class="kwd">TYPE</span><span class="pln"> t_emp </span><span class="kwd">IS</span><span class="pln"> </span><span class="kwd">TABLE</span><span class="pln"> </span><span class="kwd">OF</span><span class="pln"> </span><span class="typ">EMPLOYEES%ROWTYPE</span><span class="pln"> </span><span class="kwd">INDEX</span><span class="pln"> </span><span class="kwd">BY</span><span class="pln"> </span><span class="typ">PLS_INTEGER</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">TYPE</span><span class="pln"> t_dept_ids </span><span class="kwd">IS</span><span class="pln"> </span><span class="kwd">TABLE</span><span class="pln"> </span><span class="kwd">OF</span><span class="pln"> </span><span class="typ">EMPLOYEES.DEPARTMENT_ID%TYPE</span><span class="pun">;</span><span class="pln">
+    v_emp t_emp</span><span class="pun">;</span><span class="pln">
+    v_dept_emp t_emp</span><span class="pun">;</span><span class="pln">
+    v_dept_ids t_dept_ids</span><span class="pun">;</span><span class="pln">
+    idx </span><span class="typ">PLS_INTEGER</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">BEGIN</span><span class="pln">
+    </span><span class="kwd">SELECT</span><span class="pln"> </span><span class="kwd">DISTINCT</span><span class="pln"> DEPARTMENT_ID </span><span class="kwd">BULK COLLECT</span><span class="pln"> </span><span class="kwd">INTO</span><span class="pln"> v_dept_ids
+    </span><span class="kwd">FROM</span><span class="pln"> EMPLOYEES </span><span class="kwd">WHERE</span><span class="pln"> DEPARTMENT_ID </span><span class="kwd">IS</span><span class="pln"> </span><span class="kwd">NOT</span><span class="pln"> </span><span class="kwd">NULL</span><span class="pun">;</span><span class="pln">
+
+    </span><span class="kwd">FOR</span><span class="pln"> i </span><span class="kwd">IN</span><span class="pln"> </span><span class="lit">1</span><span class="pln"> </span><span class="pun">..</span><span class="pln"> v_dept_ids</span><span class="pun">.</span><span class="fun">COUNT</span><span class="pln">
+    </span><span class="kwd">LOOP</span><span class="pln">
+        </span><span class="kwd">SELECT</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="kwd">BULK COLLECT</span><span class="pln"> </span><span class="kwd">INTO</span><span class="pln"> v_emp </span><span class="kwd">FROM</span><span class="pln"> EMPLOYEES
+        </span><span class="kwd">WHERE</span><span class="pln"> DEPARTMENT_ID </span><span class="pun">=</span><span class="pln"> v_dept_ids</span><span class="pun">(</span><span class="pln">i</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">AND</span><span class="pln"> HIRE_DATE </span><span class="kwd">IS</span><span class="pln"> </span><span class="kwd">NOT</span><span class="pln"> </span><span class="kwd">NULL</span><span class="pln">
+        </span><span class="kwd">ORDER</span><span class="pln"> </span><span class="kwd">BY</span><span class="pln"> HIRE_DATE </span><span class="kwd">ASC</span><span class="pun">;</span><span class="pln">
+        v_dept_emp</span><span class="pun">(</span><span class="pln">v_dept_ids</span><span class="pun">(</span><span class="pln">i</span><span class="pun">))</span><span class="pln"> </span><span class="pun">:=</span><span class="pln"> v_emp</span><span class="pun">(</span><span class="lit">1</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">END</span><span class="pln"> </span><span class="kwd">LOOP</span><span class="pun">;</span><span class="pln">
+
+    idx </span><span class="pun">:=</span><span class="pln"> v_dept_emp</span><span class="pun">.</span><span class="fun">FIRST</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">WHILE</span><span class="pln"> idx </span><span class="kwd">IS</span><span class="pln"> </span><span class="kwd">NOT</span><span class="pln"> </span><span class="kwd">NULL</span><span class="pln">
+    </span><span class="kwd">LOOP</span><span class="pln">
+        v_dept_emp</span><span class="pun">(</span><span class="pln">idx</span><span class="pun">).</span><span class="pln">SALARY </span><span class="pun">:=</span><span class="pln"> v_dept_emp</span><span class="pun">(</span><span class="pln">idx</span><span class="pun">).</span><span class="pln">SALARY </span><span class="pun">*</span><span class="pln"> </span><span class="lit">1.25</span><span class="pun">;</span><span class="pln">
+        </span><span class="kwd">INSERT</span><span class="pln"> </span><span class="kwd">INTO</span><span class="pln"> EMPLOYEES_SEN </span><span class="kwd">VALUES</span><span class="pln"> v_dept_emp</span><span class="pun">(</span><span class="pln">idx</span><span class="pun">);</span><span class="pln">
+        idx </span><span class="pun">:=</span><span class="pln"> v_dept_emp</span><span class="pun">.</span><span class="pln">NEXT</span><span class="pun">(</span><span class="pln">idx</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">END</span><span class="pln"> </span><span class="kwd">LOOP</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">END</span><span class="pun">;</span></code></pre>
+
+Írjon programot, amely egy asszociatív tömbbe gyűjti a dolgozók azonosítóját, fizetését és felvételük időpontját, majd megadja annak a dolgozónak a teljes nevét és a részleg nevét, ahol dolgozik, aki esetében a legnagyobb a fizetés/tapasztalat hányados!
+<pre class="prettyprint lang-plsql prettyprinted" style=""><code><span class="kwd">DECLARE</span><span class="pln">
+    </span><span class="kwd">TYPE</span><span class="pln"> t_emp_rec </span><span class="kwd">IS</span><span class="pln"> </span><span class="typ">RECORD</span><span class="pln"> </span><span class="pun">(</span><span class="pln">
+        employee_id </span><span class="typ">EMPLOYEES.EMPLOYEE_ID%TYPE</span><span class="pun">,</span><span class="pln">
+        salary      </span><span class="typ">EMPLOYEES.SALARY%TYPE</span><span class="pun">,</span><span class="pln">
+        hire_date   </span><span class="typ">EMPLOYEES.HIRE_DATE%TYPE</span><span class="pln">
+    </span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">TYPE</span><span class="pln"> t_emp_arr </span><span class="kwd">IS</span><span class="pln"> </span><span class="kwd">TABLE</span><span class="pln"> </span><span class="kwd">OF</span><span class="pln"> t_emp_rec </span><span class="kwd">INDEX</span><span class="pln"> </span><span class="kwd">BY</span><span class="pln"> </span><span class="typ">PLS_INTEGER</span><span class="pun">;</span><span class="pln">
+    v_emp_arr t_emp_arr</span><span class="pun">;</span><span class="pln">
+    v_rate </span><span class="typ">NUMBER</span><span class="pun">;</span><span class="pln">
+    v_max_rate </span><span class="typ">NUMBER</span><span class="pln"> </span><span class="pun">:=</span><span class="pln"> </span><span class="lit">0.0</span><span class="pun">;</span><span class="pln">
+    v_max_rate_id </span><span class="typ">EMPLOYEES.EMPLOYEE_ID%TYPE</span><span class="pun">;</span><span class="pln">
+    v_max_rate_name </span><span class="typ">VARCHAR2</span><span class="pun">(</span><span class="lit">100</span><span class="pun">);</span><span class="pln">
+    v_max_rate_dept_name </span><span class="typ">DEPARTMENTS.DEPARTMENT_NAME%TYPE</span><span class="pun">;</span><span class="pln">
+    idx </span><span class="typ">PLS_INTEGER</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">BEGIN</span><span class="pln">
+    </span><span class="kwd">SELECT</span><span class="pln"> EMPLOYEE_ID</span><span class="pun">,</span><span class="pln"> SALARY</span><span class="pun">,</span><span class="pln"> HIRE_DATE
+    </span><span class="kwd">BULK COLLECT</span><span class="pln"> </span><span class="kwd">INTO</span><span class="pln"> v_emp_arr
+    </span><span class="kwd">FROM</span><span class="pln"> EMPLOYEES</span><span class="pun">;</span><span class="pln">
+
+    idx </span><span class="pun">:=</span><span class="pln"> v_emp_arr</span><span class="pun">.</span><span class="fun">FIRST</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">WHILE</span><span class="pln"> idx </span><span class="kwd">IS</span><span class="pln"> </span><span class="kwd">NOT</span><span class="pln"> </span><span class="kwd">NULL</span><span class="pln">
+    </span><span class="kwd">LOOP</span><span class="pln">
+        v_rate </span><span class="pun">:=</span><span class="pln"> v_emp_arr</span><span class="pun">(</span><span class="pln">idx</span><span class="pun">).</span><span class="pln">SALARY </span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="fun">SYSDATE</span><span class="pln"> </span><span class="pun">-</span><span class="pln"> v_emp_arr</span><span class="pun">(</span><span class="pln">idx</span><span class="pun">).</span><span class="pln">HIRE_DATE</span><span class="pun">);</span><span class="pln">
+        </span><span class="kwd">IF</span><span class="pln"> v_max_rate </span><span class="pun">&lt;</span><span class="pln"> v_rate
+        </span><span class="kwd">THEN</span><span class="pln">
+            v_max_rate </span><span class="pun">:=</span><span class="pln"> v_rate</span><span class="pun">;</span><span class="pln">
+            v_max_rate_id </span><span class="pun">:=</span><span class="pln"> v_emp_arr</span><span class="pun">(</span><span class="pln">idx</span><span class="pun">).</span><span class="pln">EMPLOYEE_ID</span><span class="pun">;</span><span class="pln">
+        </span><span class="kwd">END</span><span class="pln"> </span><span class="kwd">IF</span><span class="pun">;</span><span class="pln">
+        idx </span><span class="pun">:=</span><span class="pln"> v_emp_arr</span><span class="pun">.</span><span class="pln">NEXT</span><span class="pun">(</span><span class="pln">idx</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">END</span><span class="pln"> </span><span class="kwd">LOOP</span><span class="pun">;</span><span class="pln">
+
+    </span><span class="kwd">SELECT</span><span class="pln"> FIRST_NAME </span><span class="pun">||</span><span class="pln"> </span><span class="str">' '</span><span class="pln"> </span><span class="pun">||</span><span class="pln"> LAST_NAME</span><span class="pun">,</span><span class="pln"> DEPARTMENT_NAME </span><span class="kwd">INTO</span><span class="pln"> v_max_rate_name</span><span class="pun">,</span><span class="pln"> v_max_rate_dept_name
+    </span><span class="kwd">FROM</span><span class="pln"> EMPLOYEES </span><span class="kwd">INNER</span><span class="pln"> </span><span class="kwd">JOIN</span><span class="pln"> DEPARTMENTS </span><span class="kwd">USING</span><span class="pun">(</span><span class="pln">DEPARTMENT_ID</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">WHERE</span><span class="pln"> EMPLOYEE_ID </span><span class="pun">=</span><span class="pln"> v_max_rate_id</span><span class="pun">;</span><span class="pln">
+    DBMS_OUTPUT</span><span class="pun">.</span><span class="pln">PUT_LINE</span><span class="pun">(</span><span class="fun">TO_CHAR</span><span class="pun">(</span><span class="pln">v_max_rate_name</span><span class="pun">)</span><span class="pln"> </span><span class="pun">||</span><span class="pln"> </span><span class="str">' works at the '</span><span class="pln"> </span><span class="pun">||</span><span class="pln"> </span><span class="fun">TO_CHAR</span><span class="pun">(</span><span class="pln">v_max_rate_dept_name</span><span class="pun">)</span><span class="pln"> </span><span class="pun">||</span><span class="pln"> </span><span class="str">' department.'</span><span class="pun">);</span><span class="pln">
+
+</span><span class="kwd">END</span><span class="pun">;</span></code></pre>
+
+   
+
+</body></html>
