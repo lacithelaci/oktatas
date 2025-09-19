@@ -12,7 +12,7 @@ class Hanoi(Feladat):
         korong, rud = action
 
         return állapot[0:korong] + rud + állapot[korong + 1:]  # 111 -> 3 -> 311
-        # Ez a függvény alakítja át egyik állapotból a másikba az állapotunkat
+        # Ez a függvény alakítja át egyik állapotból a másikba az állapotunkat úgy, hogy kicseréli az index helyén lévő alakzatot
 
     def rákövetkező(self, állapot: str) -> list[tuple[str, str]]:
         lepesek = []
@@ -24,6 +24,7 @@ class Hanoi(Feladat):
             t = f'1. rúdrúl a {f1 + 1} korongot a 2. rúdra teszem.'
             act = Act(f1, '2')
             lepesek.append((t, self.result(állapot, act)))
+            # egyik korongat az adott rúdra helyezünk, összegyűjtsük a listában az állapotot, meg hogy mivé kell változnia
 
         if f1 > -1 and (f1 < f3 or f3 == -1):
             t = f'1. rúdrúl a {f1 + 1} korongot a 3. rúdra teszem.'
@@ -65,4 +66,5 @@ while True:
     if H.célteszt(all):
         print(all)
         break
+
 
