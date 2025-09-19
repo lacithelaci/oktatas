@@ -12,7 +12,7 @@ class Hanoi(Feladat):
         korong, rud = action
 
         return állapot[0:korong] + rud + állapot[korong + 1:]  # 111 -> 3 -> 311
-        # opcionális
+        # Ez a függvény alakítja át egyik állapotból a másikba az állapotunkat
 
     def rákövetkező(self, állapot: str) -> list[tuple[str, str]]:
         lepesek = []
@@ -65,3 +65,4 @@ while True:
     if H.célteszt(all):
         print(all)
         break
+
