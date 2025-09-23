@@ -1,4 +1,4 @@
-!Hello World! - Ez egy comment waooooooooooooooooooo;
+!Gepetto;
 Model:
 
 	[profit] max = 3*x1 + 2*x2;
@@ -8,6 +8,7 @@ Model:
 
 End
 
+!Pék;
 
 Model:
 
@@ -18,3 +19,15 @@ Model:
 
 End
 
+
+!Kocsi;
+Model:
+
+	[profit] max = 3*x1 + 2*x2;
+	[f] 1/40*x1 + 1/60*x2 <=1;
+	[k] 1/50*x1 + 1/50*x2 <=1;
+	[ker1] x1>=30;
+	[ker2] x2>=20;
+
+
+End
