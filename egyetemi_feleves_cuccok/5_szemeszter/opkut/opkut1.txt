@@ -70,6 +70,7 @@ Model:
 	[vasar] x6 + x3+x4+x5+x7 >= 11; 
 
 
+# Egész értékek
 @gin(x1);
 @gin(x2);
 @gin(x3);
