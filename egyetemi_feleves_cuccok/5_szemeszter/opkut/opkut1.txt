@@ -1,0 +1,20 @@
+!Hello World! - Ez egy comment waooooooooooooooooooo;
+Model:
+
+	[profit] max = 3*x1 + 2*x2;
+	[felk] 2*x1 + x2 <= 100;
+	[faf]  x1 + x2 <= 80;
+	[ker] x1 <= 40;
+
+End
+
+
+Model:
+
+	[profit] max = 30*x1 - 4*x2;
+	[liszt] 5*x1 <= 30+x2;
+	[eleszto] x1 <=5;
+	@free(x2);
+
+End
+
