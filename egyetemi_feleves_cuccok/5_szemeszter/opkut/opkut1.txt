@@ -70,8 +70,18 @@ Model:
 	[vasar] x6 + x3+x4+x5+x7 >= 11; 
 
 
+@gin(x1);
+@gin(x2);
+@gin(x3);
+@gin(x4);
+@gin(x5);
+@gin(x6);
+@gin(x7);
 
 End
+
+
+
 
 
 
