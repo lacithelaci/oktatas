@@ -58,4 +58,23 @@ Model:
 End
 
 
+!postasok;
+Model:
+	[profit] min = x1+x2+x3+x4+x5+x6+x7;
+	[hetfo] x1+x4 + x5 + x6 + x7 >=17;
+	[kedd] x2 + x5+x6+x7+x1 >=13;
+	[szerda] x3 + x6+x7+x1+x2 >= 15;
+	[csut] x4 + x3+x7+x1+x2 >= 19;
+	[pentek] x5 + x3+x4+x1+x2 >= 14;
+	[szombat] x6 + x3+x4+x5+x2 >= 16;
+	[vasar] x6 + x3+x4+x5+x7 >= 11; 
+
+
+
+End
+
+
+
+
+
 
