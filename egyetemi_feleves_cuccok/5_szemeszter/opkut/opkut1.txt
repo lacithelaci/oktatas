@@ -31,3 +31,16 @@ Model:
 
 
 End
+
+
+!Random;
+
+Model:
+
+	[profit] max = 2*x1 - x2;
+	[egyik] x1-x2 <=1;
+	[masik] 2*x1 + x2m >=6;
+
+
+End
+
