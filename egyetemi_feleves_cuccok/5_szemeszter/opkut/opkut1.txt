@@ -91,6 +91,14 @@ Model:
 
 END
 
+#gofris
+Model:
+
+	[profit] max = 50*x1 + 40*x2;
+	[liszt] 10*x1 + 8*x2 <= 800;
+	[tej] 13*x1 + 6.5*x2 <= 845;
+
+End
 
 
 
