@@ -1,5 +1,6 @@
 from http.client import CannotSendRequest
 
+from ora2.data.basic.generator import generate_people
 from ora2.data.basic.model_dataclasses import Person, Car, Airport
 import pandas as pd
 
@@ -33,3 +34,6 @@ print()
 airport_list  = [r1, r2, r3]
 df3 = pd.DataFrame.from_records([p.__dict__ for p in airport_list])
 print(df3)
+
+
+print(generate_people(10))
