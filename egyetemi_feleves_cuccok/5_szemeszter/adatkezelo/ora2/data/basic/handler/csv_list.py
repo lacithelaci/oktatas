@@ -7,7 +7,12 @@ from ora2.data.basic.model_dataclasses import Person, Car, Airport
 
 def read_people(path: str, file_name: str = "people.csv", heading: bool = True, delimiter: str = ";") -> list[Person]:
     with open(os.path.join(path, file_name if file_name is not None else "people.csv"), "r") as file:
-        rows = csv.reader(file, heading=heading, delimiter=delimiter)
+        rows = csv.reader(file, delimiter=delimiter)
+
+        # Skip the header row if heading is True
+        if heading:
+            next(rows)  # This skips the first row (header)
+
         return [Person(row[0], row[1], int(row[2]), bool(row[3])) for row in rows]
 
 
