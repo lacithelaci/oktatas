@@ -101,6 +101,15 @@ Model:
 End
 
 
+# Öltönyös
+Model:
+
+[profit] max = 4*x + 3*y;
+[szabas] x+y<=40;
+[varras] 2*x+y<=60;
+
+End
+
 
 
 
