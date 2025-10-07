@@ -1,6 +1,7 @@
 from http.client import CannotSendRequest
 
 from ora2.data.basic.generator import generate_people
+from ora2.data.basic.handler.csv_list import write_people
 from ora2.data.basic.model_dataclasses import Person, Car, Airport
 import pandas as pd
 
@@ -37,3 +38,6 @@ print(df3)
 
 
 print(generate_people(10))
+
+
+write_people(generate_people(10),path='.')
