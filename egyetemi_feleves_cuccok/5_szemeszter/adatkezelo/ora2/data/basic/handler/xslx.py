@@ -3,8 +3,8 @@ from typing import Type, cast
 import openpyxl
 from openpyxl.workbook import Workbook
 
-from data.basic.generator import generate_people
-from data.basic.model_dataclasses import Person, Car, Airport
+from ora2.data.basic.generator import generate_people
+from ora2.data.basic.model_dataclasses import Person, Car, Airport
 
 
 def write_people(people: list[Person], wb: Workbook,

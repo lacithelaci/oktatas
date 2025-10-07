@@ -2,8 +2,8 @@ import json
 import os
 from typing import cast, Type
 
-from data.basic.generator import generate_people
-from data.basic.model_dataclasses import Person, Airport, Car
+from ora2.data.basic.generator import generate_people
+from ora2.data.basic.model_dataclasses import Person, Airport, Car
 
 
 def write_people(people: list[Person], path: str,

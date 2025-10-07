@@ -1,7 +1,8 @@
 from http.client import CannotSendRequest
 
-from ora2.data.basic.generator import generate_people
-from ora2.data.basic.handler.csv_list import write_people
+from ora2.data.basic.generator import generate_people, generate_cars, generate_airports
+from ora2.data.basic.handler.csv_list import write_people, read_people, write_cars, read_cars, read_airports, \
+    write_airports
 from ora2.data.basic.model_dataclasses import Person, Car, Airport
 import pandas as pd
 
@@ -37,7 +38,8 @@ df3 = pd.DataFrame.from_records([p.__dict__ for p in airport_list])
 print(df3)
 
 
-print(generate_people(10))
 
 
-write_people(generate_people(10),path='.')
+write_airports(generate_airports(10),'.')
+lista = read_airports(".","airports.csv")
+print(lista)
