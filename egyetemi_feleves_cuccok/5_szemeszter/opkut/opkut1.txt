@@ -155,4 +155,30 @@ END
 
 
 
+# Erőmű
 
+SETS:
+    VAROS /A..C/: kap;
+    BOLT  /B1..B4/: igeny;
+    UTAK (VAROS, BOLT): ktg, x;
+ENDSETS
+
+DATA:
+    kap   = 35 50 40;
+    igeny = 45 20 30 30;
+    ktg   = 8 6 10 9
+            9 12 13 7
+            14 9 16 5;
+ENDDATA
+
+[totalCost] Min = @SUM(UTAK: ktg * x);
+
+@for(VAROS(i):
+    [Kapacitas] @SUM(BOLT(j): x(i,j)) <= kap(i);
+);
+
+@for(BOLT(j):
+    [Igny] @SUM(VAROS(i): x(i,j)) >= igeny(j);
+);
+
+END
