@@ -1,0 +1,389 @@
+kereskés:
+teljes: grantáltan talál egy megoldást
+optimális: megtalálja a legjobb megoldást
+
+
+Ágens megközelítés_________________________________________________________________________________________
+· Sorolja fel a környezetet meghatározó tényezőket és ezek alapján definiálja a lehetséges környezeteket.
+	Megfigyelhető (teljesen/részben): ágens szenzorai képesek e megismerni a teljes környezetet adott időpontban
+	Determinisztikus /Sztochasztikus/ Stratégiai(más ágens): köv állapot egyértelmüen kiszámolható mostanibol
+	Epizodikus/ Sorozatszerü: ágens tapasztalata független észlelés+cselekvés epizodokbol áll?
+	Statikus/ Dinamikus /Szemidinamikus(teljesitményben): környezet változhat amig ágens gondolkozik?
+	Diszkrét/ Folytonos
+	Egy/ Több ágens (compet/ coop)
+	
+· Mi a racionális ágens (és mi nem)?
+	Alapvetések és észlelésekböl számolt teljesigményérték alapján teszi az azt maximalizáló lépést minden észlelt helyzetben. 
+	Nem feltétlen teljes tudásu/sikeres.
+
+· Mitől függ egy ágens racionalitása (adott pillanatban)?
+	+Telejesitményérték (amit/ahogy az adott állapotra számol)
+	+Környezet (röl valo ismeretek)
+	+Beavatkozások (amiket végrehajthat)
+	+Észlelés (módja, elágségessége?
+		
+· Mi a különbség és a hasonlóság az ágensprogram és ágensfüggvény között?
+	ágens program: fizikai architekturán konkrét megavalósitása egy ágens függvénynek
+	ágensfüggvény: észleléshalmazt cselekvésre képez `f: P*->A`
+	
+·Mi a specialitása az egyszerű reflex ágensek?
+	"ha-akkor" szabálylista alapján az érzékelt adatokat értekeli ki és cselekszik
+
+· Mi a specialitása a modellalapú reflexszerű ágensek?
+	reflex ágens+ memóriában tárolt környezet modell (nem teljes környezet mefigyelhetőség megfontolásból)
+	
+· Mi a specialitása a célorientált ágensnek?
+	modellalapuhoz hasonlóan modellt tárol memóriában, bemenet infromációkiértékelés után kiértékeli hogy adott cselekvése milyen hatással lesz a környezetére, ezek közül szabályok helyett célok alapján választ
+	
+· Mi a specialitása a hasznosságorientált ágensnek?
+	mint célorientált ágens csak célok helyett teljesiményérték alapján dönt (utility)
+	
+· Mi a specialitása a tanuló ágensnek?
+	kritikus öszeveti a bementet a teljesitményzabályal, 
+	tanuló elem, problem gen, végrehajtó elem között loop, amivel módositani tudja a szabályrendszerét, kedvező külő vissajelzés esetén megtartja a módositást
+
+
+Keresések______________________________________________________________________________________________
+· Mi a különbség az online és az offline keresések között?
+	Online: keresés elött teljesen megismeri a problémát, nincs szükség keresés közbeni ujabb észlelésre
+	Offline: nem teljesen megismerhető, keresés közben (akár lépésenként) uj részinformációkat gyüjtünk
+	
+· Milyen komponensei vannak egy jól definiált problémának keresési feladatok esetén?
+	Lehetséges állapotok halmaza
+	Kezdeti állapotok
+	Cél állapotok
+	Cselekvések amik rendelkezésre állnak halmaza 
+	Átmenet model ( result(state,action) )
+	Útköltség függvény  ( action-cost(state1, action, state2) )
+	
+· Keresési feladat esetén hogyan adjuk meg a cselekvéseket?
+	a of {Actions} cselekvés,  egy állapotra az összes lehetséges cselekvésre meghivjuk az átmenet függvényt, a valid állapotokat hozók tartoznak a cselekvések halmazába
+
+· Mi a kapcsolat az állapottér és keresési fa között?
+	Állapottér{valós állapotok, valós cselekvések, valós utak} gráf
+	Keresési_Fa az állapttér lehetéges állapotait reprezentáló csúcsokból épitett fa (csucsok ismétlödhetnek, etc), cselekvésekkel ráköv. fval generálunk belőle
+	
+· Mit kell tárolni a keresési fa egy csúcsában?
+	egy valós állapot + szülő csúcs + mélség + gyökértöl út költség
+	
+· Mi a különbség egy állapot és egy keresési fa csúcsa között?
+	állapt: egy irl állapot
+	csúcs: keresési fába ezt reprezentáló adat
+														
+· Adja meg az általános fakeresési algoritmust!
+	function Tree-Search(problem, strategy): megoldás vagy „sikertelen”
+		kereső fa inicializálása a probléma kezdőállapotával
+		loop do
+			if nincs kiterjeszthető csúcs
+				then return „sikertelen”
+			válassz a stratégia alapján egy levél csúcsot
+			if a csúcs célállapotot tartalmaz
+				then return kapcsolódó megoldást
+			else terjeszd ki a csúcsot, és a gyerekcsúcsokat add a keresőfához
+		end
+		
+· Adja meg az általános gráfkeresési algoritmust.
+	function Graph-Search(problem, fringe): megoldás vagy „sikertelen”
+		explored = ∅
+		perem = Insert(Make-Node(Initial-State[problem]), perem)
+		loop do
+			if perem is empty then return „sikertelen”
+			node = Remove-Front(perem)
+			if Goal-Test(problem, State[node]) then return node
+			if State[node] is not in explored then
+				closed += State[node]
+			perem = InsertAll(Expand(node, problem), perem)
+		end
+lényeges különbég  fakereséstől: kell explored set (avoid loop)
+
+Nem informált keresések________________________________________________________________________________
+· Mit jelent az, hogy vak (nem informált) keresés?
+	probléma definicióján kivül nincs más információnk az állapotról, csak következö csucsot generálni és célállapotot értékelni tudunk
+
+· Mi a perem? Adott adatszerkezetet peremként használva milyen keresési módszereket kapunk?
+	adatszerkezet legenerált kifejtésre váró csomópontoknak, tulajdonképpen feldolgozási várólista, ha az adatszerkezet
+	FIFO: szélességi bejásrást,
+	LIFO: mélységi bejárást végez
+
+· Adja meg a lényeges különbségeket a különféle nem informált keresési módszerek között!
+	BFS:
+	Szélességi:	sor, szintröl szintre, véges csucsra teljes, O(exp), minden csucst tárol, ált nem optimum
+	Egyenlete költégü:  (~best first) prioritásos sor perem legkisebb tagját kiterjeszti, teljes, optimális, azonos élköltséggekkel szélességi 
+	DFS:
+	Mélyégi:		verem, perem legmélyebb csúcsát, véges állapottérben teljes, kis tárbonyolultság, nagy időbonyolultság, nem optim
+	mélységi-korlátozott: dfs mélység limittel, van megoldás ha limiten belül
+	iterativan mélyülő mélységi: teljes, optimális, ok tér és idő bonyolultság
+			
+· Melyek a teljes fakeresési módszerek (milyen feltételek mellett)?
+	Szélességi:	teljes ha véges elágazás (b :=elágazási faktor)
+	Egyenlete költégü:  teljes ha élköltéget pozitivak és nagyobbak eps-nal
+	mélységi-korlátozott: teljes ha mélység limiten belül
+	iterativan mélyülő mélységi: mindig teljes
+	
+· Mely fakeresési módszerek optimálisak?
+	Szélességi, Egyenlete költégü
+	
+· Adja meg a nem informált keresési módszereket a tárkomplexitásuk szerint növekvő sorrendben!
+	iter mély (b*d) < dfs korát (b*l) < dfs (b*m) < egyenletes költségű < szélességi
+
+· Adja meg a nem informált keresési módszereket az időkomplexitásuk szerint növekvő sorrendben!
+	iter mély (b^d)  < egyenletes költségű < szélességi < dfs korát (b^l) < dfs (b^m) 	
+
+· A valós életben a szélességi keresés vagy az iterált mélységi keresés ad gyorsabban eredményt?
+	it. mély, szélességi a megoldás szintent is kiterjeszti, illetve nagy a memóriaigénye (it mély lineáris memóriához képest), viszont sekély esetben lehet jobb (it. mély több calc)
+	
+· Melyek optimális gráfkeresési módszerek?
+	Szélességi, Egyenlete költégü
+	
+	
+· Mikor szükséges gráfkeresést használni fakeresés helyett?
+	sok állapot ismétlés
+
+Informált keresések____________________________________________________________________________________
+· Melyek a legjobbat először keresés-család jellemzői?
+	költség minimalizálás helyett kivánatosság maximalizálást végez kivánatossági heurisztika fügvény alapján
+	
+· Milyen problémái vannak a mohó legjobbat először keresésnek?
+	nem teljes, végtelen hurokba ragdhat, (?), nagy tár és idő (heurisztikától függően) -bonyolutság
+	
+· Melyek az A* keresés jellemzői?
+	mint mohó legjobbat először, de a hátralévő út heurisztika mellett a csúcsig megtett utat is számba veszi, optimális eredményt ad
+
+· Mit jelent az elfogadható heurisztika?
+	alábecsüli a valós költséget, nagyobb jobban közelit
+	
+· Mit garantál az elfogadható heurisztika fakeresés esetén?
+	A* kereséssel optimális megoldást ad elfogadható h(n)
+	
+· Mit garantál az elfogadható heurisztika gráfkeresés esetén?
+	ha h(n) konzisztens is, csak akkor garantál optimalis megoldást
+																<<<<<<<<<<<??????????
+· Mit jelent a konzisztens heurisztika?
+	h(n) >= c(n, a, n') + h(n')		//ut+köv heurisztik
+
+· Mit garantál a konzisztens heurisztika fakeresés esetén?
+	A* kereséssel optimális megoldást ad elfogadható h(n)
+	
+· Mit garantál a konzisztens heurisztika gráfkeresés esetén?
+	A* optimális megoldás
+	
+· Miért fontos, ha egy heurisztika dominál egy másik heurisztikát?
+	hamarabb megoldja a keresést
+	
+· Miért lehetnek érdekesek a relaxált problémák keresésnél?
+	közelitőértékek hatékony számitásához, elfogadható heur konstruálható a relax problem valós megoldásából 
+
+· A lokális algoritmusok miben hasonlítanak és miben térnek el a fa- és gráfkeresésektől?
+	ha nem kell az utat letárolnunk
+	
+· Adja meg vázlatosan a hegymászó algoritmust!
+	1. kezdöérték > 2 valamilyen fv kiszámolja legkivánatosabb szomszédot > 3 ez alapján öszehasonlitja mostanival > 4 ha nem jobb, loc min-ba vagunk
+	
+· Milyen problémái vannak a hegymászó algoritmusnak?
+	beragadhat loc max-ba és lapos helyeken
+
+· Mi a lényege a genetikus algoritmusnak?
+	gén rekombináció inspirálta, kinduló állapthalmaz elemeit ösze-spliceolja és/vagy mutálja majd fittness teszteli
+	
+· Mi a lényege a szimulált hűtésnek?
+	mint hegymászó csak egyre "hőmérséklet" értékkel adjunk meg egy lépéstávot ami egyre "hül"
+
+· Mi a lényege a minimális konfliktusok algoritmusnak?
+	kényszerkielégitő problémánál egyre kevesebb konfliktust okozó értékeket próbálunk 
+
+
+Kényszer-kielégítés________________________________________________________________________________________
+· Mi a különbség egy általános fakeresési valamint egy kényszer-kielégítési probléma között?
+	állapot fekete dobz tetszöleges adatstrukturában, csak átmenet, heurisztika és célállapot van implement
+	változókra vonatkozó célteszt kényszerek tartományok halmaza
+	
+· Mivel lehet megadni egy kényszer-kielégítési feladatot?
+	kiinduló állapot, célpont, átmenet függvény, útköltség
+
+· Milyen kényszerek lehetnek egy kényszer-kielégítési problémában?
+· Mit jelent a kemény és puha kényszer? (Abszolút- és preferenciakényszer)
+	kemény: minimum sikerességi követelmény
+	puha: opcionális kivánt	
+	
+· Hogyan lehet megoldani egy kényszer-kielégítési problémát?
+	kezdetileg üres változóinkhoz konfliktusmentes érték-tupplet keresünk
+	MRV: minimum remaining val
+
+· Mit tartalmaz a kényszergráf, és mit jelölnek egyes alkotórészei?
+	csúcsai változók, élek kényszerek, 
+	bináris kényszerkielégités
+
+· Hogyan működik a visszalépéses keresés egy kényszer-kielégítési probléma esetén?
+	mélységi keresés, változóknak egyenként sorra adunk értéket és visszalépünk ha konfliktusba fut
+
+· Milyen heurisztikákkal lehet gyorsítani a visszalépéses keresésen? Ismertesse az egyes módszerek lényegét!
+	MRV, max fokszám heurisztika (legtöbb kényszert lefedni először), előrenéző ellenörzés (hozzárendeletlenek maradt értékhalmaz log, baj ha elfogy) élkonzitencial (lokális kényszerteljesitések)
+		
+· Mi a különbség a előrenéző ellenőrzés (forward checking) és a kényszerek terjesztése (constaint propagation) között?
+	előrenéző ellenörzés: hozzárendeletlenek maradt értékhalmaz log, baj ha elfogy
+	élkonzitencial: változók közti kapcolatokat néz, gyors hibajelzés
+	
+· Hogyan használható az él-konzisztencia? Milyen korlátai vannak?
+	X->Y él konziztens ha minden x of X-re van y of Y megengedett érték
+
+Kétszemélyes játékok_______________________________________________________________________________________
+· Hogyan kapcsolhatóak a kétszemélyes játékok a keresési problémákhoz?
+	többágenses stratégiai környezetben keresés
+	
+· Hogyan működik a minmax keresés?
+	játékfa min és max játékos lépés szintekkel, teljesen felépitett játék keresédi fával teljes infomrációju determinisztikus játékot tökéletesen lehet játszani
+	
+· Használható-e a minimax keresés akkor, amikor a játékfa nem fér el egyszerre a memóriában? Milyen módon?
+	mélységi keresés véges mélységgel, tehát  elvileg elég egyszerre egy út egyedi csomópontjait tárolni
+
+· Mit jelöl az alfa és béta az alfa-béta nyesés esetén?
+	alpha a max-játékos számára legjobb min-játékos számára opció (init -inf), felülirjuk jelenleg eval legjobb értékkel
+	pruning: azonnal elvetjük azokat az ágakat amikröl látjuk hogy rosszabb eredményre jutnak mint egy már evaluált
+	irl: caching and heuristic depth limit
+
+· Hogyan kezelhetjük a véletlent is tartalmazó játékokat?
+	expectinimax, a véletlenségi faktor Min és Max mellé harmadik játékos lépés szintként ábrázoljuk, várható valség értékeket használva
+	nem hatékony minden eshetőséget figyelembe venni, Monte Carlo szimuláció mintavétellel helyettesithető determinisztikus közelitést adva
+
+· Hogyan kezelhetjük a nem teljesen informált játékokat?
+	lehetőségeinkhez mérten kipróbálunk lépéseket, random ha nem lehet mind, kiszámitjuk a minmax értéket és a legjobbat választjuk
+
+
+Bizonytalanság kezelése___________________________________________________________________________________
+· Mit jelent az, hogy a priori?
+	infromációszerzés elötti kiinduló feltevés
+
+· Mit jelent a feltételes valószínűség?
+	event1 valsége annak ismeretében hogy event2 bekövetkezett
+	P(a|b)=P(a,b)/P(b)
+
+· Adja meg a szorzatszabályt!
+	P(a,b) = P(a|b)*P(b) = P(b|a) *P(a)
+	
+· Mit jelent, hogy két valószínűségi változó független?
+	a független b, ha
+	P(a|b) = P(a) vagy P(b|a)  és  P(b|a) = P(b) vagy P(a|b)  => P(a,b) = P(a)*P(b)
+
+· Mit jelent, hogy két valószínűségi változó feltételesen független?
+	P(a,b|c) = P(a|c) * P(b|c)
+
+· Hogyan adható meg egy Bayes-hálózat?
+	irányitott gráf, csomópotonk valségi változók, élek köztük feltételes függetlenség, élekhez valségek tartoznak
+	
+· Adja meg az együttes valószínűség meghatározására vonatkozó láncszabályt!
+P(x1...xn)=P(x1)*P(x2|x1)*P(x3|x1,x2)*...*(xn|parent(xn))
+
+Valószínűségi következtetés__________________________________________________________________________________
+· Mi az a Bayes háló, milyen elemei vannak, hogyan épül fel?
+	irányitott gráf, csomópotonk valségi változók, élek köztük feltételes függetlenség, élekhez valségek tartoznak
+	
+· Hogyan alakul ki a feltételes valószínűségi táblázatában a Bayes hálók esetén?
+
+· Mit értünk valószínűségi következtetés alatt?
+	adott megfigyelt események és hozzájuk tartozó valségi változókból számitjuk cél változók a posteriori valségi eloszálsát
+
+
+Megfigyelésen alapuló tanulás_______________________________________________________________________________
+· Mi az a hipotézis függvény és mit jelent, amikor a modellünk konzisztens?
+	f megközelitendö fv-böl vett minták alpján felvett h közelitö hipotézis fv
+	konzisztens modell: h(x)=f(x) minden mintaelemre
+
+· Hogyan definiálhatjuk a döntési fát? (bemenete, kimenete, paraméterei)
+	hipotézisfv reprezentációja, lehet dic/ folyt bemenet, disc/ foly kimenet (calssification/ regression)
+	
+· Hogyan konstruálhatjuk meg a döntési fánkat?
+	attr. választásnál cél hogy sekély legyen, folyamata:						<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+	
+· Írja le hogy mit jelent az információ nyereség és hogyan használhatjuk a döntési fa felépítéséhez.
+	attr-teszt előtti és utáni információszükséglet különbsége
+	egit kiválasztani a legrelevánsabb attr, magas érték == sok infót hordoz az attr, max. a gyökér
+
+· Írja le, hogyan és milyen módszerekkel lehet kiértékelni egy betanított modell pontosságát.
+	betanitás elött felosztjuk a mintahalmazunkat tanitó és teszt halmazra (60:40 - 90:10 mérettöl függöen)
+	betanitjuk a modellt utánna leteszteljük, tanulás folytán prediktiv teljesitmény változást tanulási görbén ábrázoljuk, training epoch
+	
+
+Statisztikai tanulás____________________________________________________________________________________________
+· Bayes tanulás esetén mit nevezünk tényeknek és mi lesz a hipotézünk?
+	tények: rendelkezésre álló bemeneti adatok
+	hipotézis: h1-hn változók P(H) a priori eloszlással, modellünk világképe
+
+· Mi az a maximum a posteriori hipotézis és hogyan számolhatjuk?
+	kezelhetetlenül nagy hipotézis esetén használt közelités
+	P(H) prior eloszlás és ehez tartozó likelyhood függvényböl Bayes tétellel a posteriori becslések maximuma
+
+· Mi az a maximum likelihood hipotézis és hogyan számolhatjuk?
+	maximum a posteriori  csak egyenletes P(H) eloszlással
+
+· Mutassa be a naiv-Bayes modell működésének alapját!
+
+
+Neurális hálók_______________________________________________________________________________________________
+· Mutassa be hogyan működik a neurális háló egy neuronja!
+	neural net eleme, bemenetek kombinációja h meghalad egy küszöb értéket az alapján kimenet, gyakori sigmoid aktiválás fv
+	
+· Milyen aktivációs függvényeket ismer és mik a különbségek?
+	1-aktiv 0-inaktiv, nemlineárs különben a háló egy lin fv lenne
+	bináris küszöbfv, sigmoid lágy küszöb (differenciálható)
+
+· Milyen neurális háló struktúrákat ismer és mik a különbségek?
+	elörecsatolt: csak súlyok, nincs belső állapot, rétegenként, csak előző rétegböl bemenet
+	rekurens: kimenet visszacsatolva bemenetbe (temp memória), dinamikus lehet stabil  vagy oszcilláló is
+
+· Egy egyszerű példán keresztül mutassa be, hogyan működik egy egyrétegű előrecsatolt neurális háló!
+	öszes bementet csak köv rétegbe, perceptron háló, kimenetek függetlenet egymástól, egy suj egy kimenet
+	ex. "1 bemenetek átlépnek vmien küszöb értéket"
+
+· Hogyan tudjuk tanítani a neurális hálónk súlyait? Milyen módszer ismert rá és mi a módszer alapelve?
+	súly-térbeli optimalizálás, mintahalmazon mért négyzetes hibaösszeg minimalizálásra módositjuk a súlyokat gradiens optimalizálással
+	
+· Milyen típusú tanulási módszereket ismer és mik a különbségek? Miként különböznek diszkrét és folytonos esetben?
+· Mutassa be a konvolúció műveletét!
+· Milyen módon és milyen függvények közelíthetőek neurálsi hálók segítségével?
+· Milyen hiba függvényt alkalmazhatunk regressziós problémák megoldásához?
+
+
+Megerősítéses tanulás____________________________________________________________________________________________
+· Hogyan szól a megerősítéses tanulás definíciója?
+	gépi tanulás területe mely jutalom maximalizáló intellingens ágenseket vizsgál non-determinisztikus trialal-and-error tanuló környezetben, 
+	gyakran Markov döntésfolyamatként vázolja az ágens céljával és környzetével fennálló viszonyát
+
+· Írja le koncepcionális szinten a megerősítéses tanulás működését. Miként interaktál az ágens a környezetével?
+	State, Action, Reward, next S'tate
+	ágens adott S állpotban A cselekvést végrehajtja aminek eredményeként S' állapotba kerül amire r jutalomértéket ad a utility fn-je
+
+· Mit értünk Markov döntési folyamat alatt és mik az alapvető alkotó elemei?
+	Markov tulajdonság: köv állapot csak az előttitöl függ
+	Elemek: States, Actions, Reward fn, P (state transistion Prob), gamma  (discount factor)
+	Policy Lookup Table, use avg cost when recurring
+	
+· Mit értünk policy függvény alatt a megerősítéses tanuláshoz kapcsolódóan?
+	minden állapothoz egy cselekvést rendel, determinisztikus vagy sem, az ágens stratégiáját irja le
+	
+· Mit értünk value és quality függvény alatt a megerősítéses tanuláshoz kapcsolódóan?
+	value: ágens adott állapt beli helyzetét jellemző mértékszám
+	quality: az ágens lépés opcióinak összehasonlitására mértékszám
+
+· Hogyan tudjuk összegezni a lépések után járó jutalmakat a megerősítéses tanulás visszacsatolásához?
+	R(t+n)= r[t+1] + γ*r[t+2]  +... + γ^(n-1)*r[t+n] 	//γ := discount factor
+
+· Hogyan működik a gamma (γ) jutalmak összegzésekor?
+	γ of [0,1], 0-csak azonnali jutalom, 1-nincs discount
+
+· Mit jelent a felderítés és kiaknázás a megerősítéses tanuláshoz kapcsolódóan?
+	Felderités: amikor célja hogy uj információkat szerezzen, uj dolgokat próbáljon ki
+	Kiaknázás: meglévő infromá ciókra támaszkodva jutalom-maximalizálva teszeget
+
+· Hogyan szabályozza az ε értéke a felderítés és kiaknázás közötti eloszlást?
+	ágens bármelyik lépésben P=1-ε valséggel exploitol, ε értéke lépésenként folyamatosan csökken
+
+· Írja le a Bellman egyenlet lényegét és formalizálja is.
+	V(s) -state value, Q(s,a) -sum of rewards if act a in s state
+	V(s[t])=E[r[t+1] + γ*V(s[t+1])]
+	V(s) = R(s) + γ*max( P(s'|s,a)*V(s') )	s': next state, max -optimal policy from state s
+
+· Hogyan használható a TD-tanulás a value és a quality függvények tanításához?
+	Temporal Difference learning,
+	V(s[t])=V(s[t]) + a*[r[t+1] + γ*V(s[t+1]) - V(s[t]) ]	a:= learning rate
+			    learn rate	new			old
+	Q(s,a) ugyanugy
