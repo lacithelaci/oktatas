@@ -46,9 +46,22 @@ def gyorshatvany(alap, exp, mod):
     return (alap * gyorshatvany(alap, exp - 1, mod)) % mod
 
 
+def gyorshatvany2(a, k, m):
+    res = 1
+    a = a % m
+    while k > 0:
+        if k & 1 == 1:
+            res = res * a % m
+
+        k = k >> 1
+        a = a ** a % m
+
+    return res
+
+
 if __name__ == '__main__':
     main()
 
 print(euklideszi(5, 120, 1))
 print(k_euklideszi(544, 119, 2, 1, 1))
-print(gyorshatvany(2, 10, 1000))
+print(gyorshatvany2(6, 73, 100))
