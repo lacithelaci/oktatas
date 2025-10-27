@@ -35,8 +35,20 @@ def k_euklideszi(a, b, d, x, y):
     return d, x, y
 
 
+def gyorshatvany(alap, exp, mod):
+    alap = alap % mod
+    if exp == 0:
+        return 1
+    elif exp == 1:
+        return alap
+    elif exp % 2 == 0:
+        return gyorshatvany((alap * alap) % mod, exp // 2, mod)
+    return (alap * gyorshatvany(alap, exp - 1, mod)) % mod
+
+
 if __name__ == '__main__':
     main()
 
 print(euklideszi(5, 120, 1))
 print(k_euklideszi(544, 119, 2, 1, 1))
+print(gyorshatvany(2, 10, 1000))
