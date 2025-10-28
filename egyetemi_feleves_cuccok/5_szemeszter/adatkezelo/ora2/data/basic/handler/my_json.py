@@ -15,6 +15,8 @@ def write_people(people: list[Person], path: str,
             [person.__dict__ for person in people],
             file, indent=2 if pretty else None)
 
+    assert file_name, "file_name cannot be empty!"
+
 
 def read_people(path: str, file_name: str = "people",
                 extension: str = ".json") -> list[Person]:
@@ -26,7 +28,6 @@ def read_people(path: str, file_name: str = "people",
             for person in json.load(file)
         ]
         """
-
         def convert(d: dict) -> Person:
             return Person(**d)
 
@@ -96,8 +97,3 @@ def write(entities: list[object], path, file_name: str = None, extension: str = 
     else:
         raise RuntimeError("Unknown type of entity")
 
-if __name__ == "__main__":
-    people = generate_people(10)
-    write_people(people, "D:/", pretty=False)
-    for person in read_people("D:/"):
-        print(person)

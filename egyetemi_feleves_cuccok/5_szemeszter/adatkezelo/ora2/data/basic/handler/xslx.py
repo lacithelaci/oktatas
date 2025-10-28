@@ -150,14 +150,4 @@ def write(entities: list[object], workbook: openpyxl.Workbook,
         raise RuntimeError("Unknown type of entity")
 
 
-if __name__ == "__main__":
-    wb = Workbook()
-    write_people(
-        generate_people(10),
-        wb
-    )
-    wb.save("D:/people.xlsx")
 
-    wb = openpyxl.load_workbook("D:/people.xlsx")
-    for person in read_people(wb):
-        print(person)

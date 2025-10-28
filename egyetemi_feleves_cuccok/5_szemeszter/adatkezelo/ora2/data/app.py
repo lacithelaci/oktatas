@@ -1,10 +1,9 @@
 from http.client import CannotSendRequest
-
+from ora2.data.basic.handler.my_json import write_people, read_people
 from ora2.data.basic.generator import generate_people, generate_cars, generate_airports
-from ora2.data.basic.handler.csv_list import write_people, read_people, write_cars, read_cars, read_airports, \
-    write_airports
 from ora2.data.basic.model_dataclasses import Person, Car, Airport
 import pandas as pd
+from openpyxl import Workbook
 
 p1 = Person("001", "Name-001", 12,True)
 p2 = Person("002", "Name-002", 14,True)
@@ -40,6 +39,7 @@ print(df3)
 
 
 
-write_airports(generate_airports(10),'.')
-lista = read_airports(".","airports.csv")
-print(lista)
+
+write_people(person_list,".")
+l = read_people(".")
+print(l)
