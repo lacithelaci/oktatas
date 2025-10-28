@@ -182,3 +182,14 @@ def read(cls, connection, table_name: str):
 
     return result
 
+# --- Oracle kapcsolat létrehozása ---
+def get_connection():
+    # Saját Oracle belépési adataid
+    user = "U_NEPTONKÓD"
+    password = "jelszó"
+    dsn = "codd.inf.unideb.hu:1521/ora21cp.inf.unideb.hu"
+
+    print("🔌 Kapcsolódás az Oracle szerverhez (oracledb)...")
+    connection = oracledb.connect(user=user, password=password, dsn=dsn)
+    print("✅ Oracle kapcsolat sikeres!")
+    return connection
