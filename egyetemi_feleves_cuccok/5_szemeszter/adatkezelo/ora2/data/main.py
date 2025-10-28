@@ -2,19 +2,9 @@ import oracledb
 from basic.handler import sql
 from ora2.data.basic.model_dataclasses import Car, Airport, Person
 from ora2.data.basic.generator import generate_people, generate_cars, generate_airports
+from ora2.data.basic.handler.sql import get_connection
 
 
-# --- Oracle kapcsolat létrehozása ---
-def get_connection():
-    # Saját Oracle belépési adataid
-    user = "U_NEPTONKÓD"
-    password = "jelszó"
-    dsn = "codd.inf.unideb.hu:1521/ora21cp.inf.unideb.hu"
-
-    print("🔌 Kapcsolódás az Oracle szerverhez (oracledb)...")
-    connection = oracledb.connect(user=user, password=password, dsn=dsn)
-    print("✅ Oracle kapcsolat sikeres!")
-    return connection
 
 
 # --- Főprogram ---
