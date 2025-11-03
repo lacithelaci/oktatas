@@ -14,6 +14,10 @@ def main():
         q = random.randint(50, 200)
         if miller_rabin(q) and q != p:
             break
+    
+    '''
+    hány bites randomot generáljak
+    '''
 
     n = p * q
     phi = (p - 1) * (q - 1)
@@ -51,7 +55,7 @@ def main():
     # === ALÁÍRÁS / ELLENŐRZÉS ===
     print("\nDigitális aláírás teszt:")
     msg = 47
-    signature = gyorshatvany2(msg, d, n)
+    signature = kinai(msg, d, p, q, n)
     print(f"Aláírás: {signature}")
 
     check = gyorshatvany2(signature, e, n)
