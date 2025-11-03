@@ -5,12 +5,9 @@ def main():
     pass
 
 
-def euklideszi(a, b, lnko):
+def euklideszi(a, b):
     while b != 0:
-        lnko = a
-        a = b
-        b = lnko % a
-
+        a, b = b, a % b
     return a
 
 
