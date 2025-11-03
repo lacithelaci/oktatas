@@ -1,3 +1,6 @@
+import random
+
+
 def main():
     pass
 
@@ -59,9 +62,48 @@ def gyorshatvany2(a, k, m):
     return res
 
 
+
+
+def miller_rabin(n, k=10):
+
+    if n <= 1:
+        return False
+    if n <= 3:
+        return True
+    if n % 2 == 0:
+        return False
+
+    # n-1 = 2^r * d, ahol d páratlan
+    r, d = 0, n - 1
+    while d % 2 == 0:
+        r += 1
+        d //= 2
+
+    for _ in range(k):
+        a = random.randrange(2, n - 1)
+        x = pow(a, d, n)  # a^d mod n
+
+        if x == 1 or x == n - 1:
+            continue
+
+        for _ in range(r - 1):
+            x = pow(x, 2, n)
+            if x == n - 1:
+                break
+        else:
+            return False
+
+    return True
+
+
 if __name__ == '__main__':
     main()
 
+'''
 print(euklideszi(5, 120, 1))
 print(k_euklideszi(544, 119, 2, 1, 1))
 print(gyorshatvany2(6, 73, 100))
+'''
+print(miller_rabin(13))    # True (prím)
+print(miller_rabin(111))    # False (nem prím)
+
