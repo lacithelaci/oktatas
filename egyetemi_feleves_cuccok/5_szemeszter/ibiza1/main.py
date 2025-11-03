@@ -14,7 +14,7 @@ def euklideszi(a, b, lnko):
     return a
 
 
-def k_euklideszi(a, b, d, x, y):
+def k_euklideszi(a, b):
     x0 = 1
     x1 = 0
     y0 = 0
@@ -53,19 +53,14 @@ def gyorshatvany2(a, k, m):
     res = 1
     a = a % m
     while k > 0:
-        if k & 1 == 1:
-            res = res * a % m
-
-        k = k >> 1
-        a = a ** a % m
-
+        if k & 1:
+            res = (res * a) % m
+        a = (a * a) % m
+        k >>= 1
     return res
 
 
-
-
 def miller_rabin(n, k=10):
-
     if n <= 1:
         return False
     if n <= 3:
@@ -96,14 +91,25 @@ def miller_rabin(n, k=10):
     return True
 
 
+def kinai(c, d, p, q, n):
+    c1 = gyorshatvany2(c, d % (p - 1), p)
+    c2 = gyorshatvany2(c, d % (q - 1), q)
+
+    lnko, x, y = k_euklideszi(p, q)
+
+    m = (c1 * y * q + c2 * x * p) % n
+    return m
+
+
 if __name__ == '__main__':
     main()
 
 '''
 print(euklideszi(5, 120, 1))
-print(k_euklideszi(544, 119, 2, 1, 1))
+print(k_euklideszi(544, 119))
 print(gyorshatvany2(6, 73, 100))
 '''
-print(miller_rabin(13))    # True (prím)
-print(miller_rabin(111))    # False (nem prím)
+print(miller_rabin(13))  # True (prím)
+print(miller_rabin(111))  # False (nem prím)
 
+print(kinai(85, 47, 7, 13, 91))
