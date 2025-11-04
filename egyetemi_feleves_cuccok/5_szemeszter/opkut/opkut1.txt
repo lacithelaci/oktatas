@@ -264,6 +264,11 @@ ENDSETS
   @SUM( CUSTOMER( J): VOLUME( I, J)) <= 
    CAPACITY( I));
 
+
+!H4 nem végezheti a feladatot;
+
+volume(4,4) = 0;
+
 ! Here are the parameters;
 DATA:
    CAPACITY =   1,1,1,1;
@@ -274,8 +279,6 @@ DATA:
 		   30,40,65,80;
 
 
+
 ENDDATA
 END
-
-
-
