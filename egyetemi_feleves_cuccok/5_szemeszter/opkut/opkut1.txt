@@ -241,3 +241,41 @@ ENDDATA
 
 END
 
+-- 25 feladat
+MODEL:
+! A 3 Warehouse, 4 Customer 
+   Transportation Problem;
+SETS:
+   WAREHOUSE / WH1, WH2, WH3,WH4/   : CAPACITY;
+   CUSTOMER   / C1, C2, C3, C4/ : DEMAND;
+   ROUTES( WAREHOUSE, CUSTOMER) : COST, VOLUME;
+ENDSETS
+
+! The objective;
+ [OBJ] MAX = @SUM( ROUTES: COST * VOLUME);
+
+! The demand constraints;
+ @FOR( CUSTOMER( J): [DEM]
+  @SUM( WAREHOUSE( I): VOLUME( I, J)) >= 
+   DEMAND( J));
+
+! The supply constraints;
+ @FOR( WAREHOUSE( I): [SUP]
+  @SUM( CUSTOMER( J): VOLUME( I, J)) <= 
+   CAPACITY( I));
+
+! Here are the parameters;
+DATA:
+   CAPACITY =   1,1,1,1;
+   DEMAND =   1,1,1,1;
+   COST =      80,70,75,40,
+               50,40,80,90,
+		   20,60,50,70,
+		   30,40,65,80;
+
+
+ENDDATA
+END
+
+
+
