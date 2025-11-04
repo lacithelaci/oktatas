@@ -282,3 +282,16 @@ DATA:
 
 ENDDATA
 END
+-- táskás feladat
+Model:
+
+[valami] max= 16*x1 + 22*x2 + 12*x3+8*x4;
+[suly] 5*x1+7*x2+4*x3+3*x4 <=14;
+@bin(x1);
+@bin(x2);
+@bin(x3);
+@bin(x4);
+
+end
+
+
