@@ -294,4 +294,22 @@ Model:
 
 end
 
+Model:
+
+[npv] max= 16*x1 + 22*x2 + 12*x3+8*x4;
+[cash] 5*x1+7*x2+4*x3+3*x4 <=14;
+@bin(x1);
+@bin(x2);
+@bin(x3);
+@bin(x4);
+!
+x1 + x2 +x3 +x4 <=2;
+
+! Logikai feltétel: ha x1 = 1, akkor x2 = 1 
+[logic] x1-x2 >= 0;
+
+! Logikai kapcsolat: ha x2=1 → x4≠1 ;
+[logic2] x2 + x4 <= 1;
+
+end
 
