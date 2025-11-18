@@ -327,3 +327,27 @@ x2+x5+x6>=1;
 
 end
 
+# legrövidebb út
+Model:
+
+[fg] min = 5*x01+2*x02+7*x05+x14+2*x15+7*x36+5*x45+2*x56;
+[start] x01+x02+x05=1;
+[s1] x01=x14+x15;
+[s2] x02=x23;
+[s3] x23 = x36;
+[s4] x14 = x45;
+[s5] x05 + x15 + x45 = x56;
+[erkezes] x56+x36 = 1;
+@bin(x01);
+@bin(x02);
+@bin(x05);
+@bin(x14);
+@bin(x15);
+@bin(x23);
+@bin(x36);
+@bin(x45);
+@bin(x56);
+
+
+End
+
