@@ -328,6 +328,7 @@ x2+x5+x6>=1;
 end
 
 # legrövidebb út
+f1
 Model:
 
 [fg] min = 5*x01+2*x02+7*x05+x14+2*x15+7*x36+5*x45+2*x56;
@@ -351,3 +352,36 @@ Model:
 
 End
 
+f2
+model:
+
+
+[teljesut] min= 3*x01++1*x03+5*x04+2*x12+2*x14+5*x24+x31+3*x35+2*x45+2*x46+3*x56;
+
+[start] x01+x03+x04=1;
+[s1] x01+x31=x12+x14;
+[s2] x12=x24;
+[s3] x03=x31+x35;
+[s4] x04+x24+x14=x46;
+[s5] x35+x45 = x56;
+
+[erkezes] x56 + x46 =1;
+
+!Bináris változók;
+@bin(x01);
+@bin(x03);
+@bin(x04);
+@bin(x12);
+@bin(x14);
+@bin(x24);
+@bin(x31);
+@bin(x35);
+@bin(x45);
+@bin(x46);
+@bin(x56);
+
+
+
+
+
+end
