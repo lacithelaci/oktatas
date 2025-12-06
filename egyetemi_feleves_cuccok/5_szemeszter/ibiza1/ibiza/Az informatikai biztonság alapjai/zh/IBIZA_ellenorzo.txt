@@ -1,0 +1,300 @@
+NEM ELLENŐRIZTEM LE A TARTALMAT.
+
+___Alapfogalmak 10,00 / 10,00. _____________________________________________________________________________________ 
+
+Mely állítás(ok) igaz(ak)?
+Válasszon ki egyet vagy többet:
+   A fizikai védelem estén a fizikai infrastruktúra a személyzetet is jelenti.
+   A fizikai fenyegetések esetén két kategóriát különböztetünk meg: a környezeti fenyegetések és természeti csapások.
+   A túlfeszültség processzorokban, memóriában okozhat kárt.
+   A számítógép belső hőmérséklete nem lehet nagyobb, mint a szoba hőmérséklete.
+
+Mely állítás(ok) igaz(ak)?
+Válasszon ki egyet vagy többet:
+   A sérülékenység a rendszer olyan gyengesége, melyen keresztül egy fenyegetés megvalósulhat.
+   A fenyegetés egy olyan támadás, mely sérti az informatikai rendszer vagy annak elemeinek biztonságát.
+   A támadás módja szerint lehet aktív és passzív.
+   A gyakorlatban előforduló támadások nagy hányada külső támadás.
+
+Mely állítás(ok) igaz(ak)?
+Válasszon ki egyet vagy többet:
+   A férgek nulladik napi támadásokkal terjedhetnek.
+   A férgek hálózati kapcsolatok, megosztott média, e-mailek csatolmányain keresztül terjedhetnek.
+   A féreg olyan vírus, mely gazdaprogram nélkül képes terjedni.
+   A féreg szoftverek sebezhetőségeit aknázza ki.
+
+Mi a CIA hármas?
+Válasszon ki egyet:
+   Sértetlenség, Hitelesség, Letagadhatatlanság
+   Bizalmasság, Sértetlenség, Rendelkezésre állás
+   Bizalmasság, Sértetlenség, Hitelesség
+   Sértetlenség, Letagadhatatlanság, Rendelkezésre állás
+   Biztonságosság, Sértetlenség, Nyomon követhetőség
+
+Mely állítás(ok) igaz(ak)?
+Válasszon ki egyet vagy többet:
+   Vízérzékelőket a padló szinte felett 30cm-re kell elhelyezni.
+   Ha a vízérzékelő vizet detektál, automatikusan lekapcsolja az áramot.
+   A vízérzékelő elhelyezése korrektív kontrollhoz tartozik.
+
+Mely állítás(ok) igaz(ak)?
+Válasszon ki egyet vagy többet:
+   A trójaiak egyszerűen csak hasznos programok.
+   A trójaiak büntető rutinjai a botnetek kialakítása.
+   A trójaiak hátsó kapukat állítanak be.
+   A trójaiak nem sokszorozódnak.
+
+
+Mely állítás(ok) igaz(ak)?
+   Válasszon ki egyet vagy többet:
+   A vírus nem sokszorozódik.
+   A vírusok csak makrókkal ellátott dokumentumokkal terjednek.
+   A vírusnak nincs szüksége gazdaprogramra a terjedéséhez.
+   A vírusok fertőzött állományok futtatásával terjednek.
+
+Mely állítás(ok) igaz(ak)?
+   Válasszon ki egyet vagy többet:
+   A social engineering (pszichológiai támadás) olyan támadás, mely során a támadó átverve a felhasználókat ráveszi őket, hogy veszélyeztessék rendszerüket.
+   Clickjacking olyan támadás, mely során a támadó ráveszi a felhasználókat, hogy kártékony tartalmakat like-oljanak.
+   A malvertising esetén a támadó fizet az olyan hirdetésekért, melyek kártékony programokat tartalmaznak.
+
+Mire használjuk az üzenet hitelesítő kódot?
+Válasszon ki egyet vagy többet:
+   Ellenőrizzük az üzenet változatlanságát.
+   Ellenőrizzük az üzenet küldőjét.
+   Biztosítjuk az üzenet bizalmasságát.
+   Ellenőrizzük az üzenet jogosságát.
+
+Mi a hitelesség fogalma?
+Válasszon ki egyet:
+   Az adat jogosulatlanul nem változott.
+   Titkos információk nem kerülhetnek jogosulatlanok kezébe.
+   A rendszer elvártnak megfelelően működik.
+   Valaminek a forrása az, amit megjelöltek, és a tartalma az eredeti.
+
+
+___Titkosítási sémák 11,42 / 12,00. _____________________________________________________________________________________ 
+
+Melyik állítás igaz?
+Válasszon ki egyet:
+   Minden titkosítási séma titkos kulcsát kulcscsere algoritmussal kell eljuttatni a másik félhez.
+   A szimmetrikus titkosítás titkosító és visszafejtő kulcsa lehet bitről bitre ugyanaz.
+   Egy titkosítási séma megadásánál elegendő megadni a titkosító, visszafejtő és kulcsgeneráló algoritmusokat.
+   Ahhoz, hogy a titkosítási séma ne legyen feltörhető a kulcstér mérete megszámlálhatóan végtelen.
+
+Mely állítás igaz?
+Válasszon ki egyet vagy többet:
+   A visszafejtő algoritmus egyik bemenete mindig a titkos kulcs.
+   A titkosító algoritmus általában randomizált.
+   A titkosító algoritmus egyik bemenete mindig a titkos kulcs.
+   A kulcsgeneráló algoritmus kimenete a titkos kulcs.
+
+Melyek az aszimmetrikus titkosítási sémák?
+Válasszon ki egyet vagy többet:
+   3DES
+   ElGamal
+   AES
+   OTP
+   RSA
+
+Melyik a legerősebb támadás?
+Válasszon ki egyet:
+   Választott titkosított üzenet alapú
+   Ismert nyílt üzenet alapú
+   Csak a titkosított üzenet ismert
+   Választott nyílt üzenet alapú
+
+Melyik kulcsgeneráló algoritmus határozza meg a nyílt üzenetek, titkosított üzenetek halmazát?
+Válasszon ki egyet:
+   aszimmetrikus
+   szimmetrikus
+
+Mely algoritmusokat kell megadni egy titkosítási séma definiálásánál?
+Válasszon ki egyet vagy többet:
+   titkosított üzenetek halmazát megadó algoritmus
+   visszafejtő algoritmus
+   kulcsgeneráló algoritmus
+   kulcsteret megadó algoritmus
+   nyílt üzenetek halmazát megadó algoritmus
+   titkosító algoritmus
+
+Az aszimmetrikus titkosítás kulcsgeneráló algoritmusának bemenete:
+Válasszon ki egyet:
+   biztonsági paraméter
+   nyilvános kulcs
+   nyílt üzenet
+   titkos kulcs
+
+Mi a titkosítási sémákkal szembeni támadó célja?
+Válasszon ki egyet:
+   Meghatározni a nyilvános titkosító kulcsot.
+   Meghatározni a visszafejtő algoritmust.
+   Meghatározni a visszafejtő kulcsot.
+   Meghatározni a kulcs hosszát.
+
+Melyik állítás igaz?
+Válasszon ki egyet vagy többet:
+   Az aszimmetrikus titkosítási sémák kulcsgeneráló algoritmusa egy kulcspárt határoz meg.
+   A szimmetrikus titkosító kulcsból a visszafejtő kulcs csak nehezen számítható ki.
+   A szimmetrikus titkosító algoritmusok gyorsabbak az aszimmetrikus titkosító algoritmusoknál.
+   A szimmetrikus titkosítási sémák titkosító és visszafejtő algoritmusa mindig megegyezik.
+
+Mely titkosítási sémára igaz, hogy a visszafejtő kulcs csak nehezen számolható ki a titkosítóból?
+Válasszon ki egyet:
+   szimmetrikus
+   aszimmetrikus
+
+Mely algoritmus biztosan determinisztikus?
+Válasszon ki egyet:
+   visszafejtő
+   kulcsgeneráló
+   titkosító
+
+Mely titkosítási sémák alkalmasak video állományok titkosítására?
+Válasszon ki egyet:
+   aszimmetrikus
+   szimmetrikus
+
+
+___Történelmi titkosítások 10,00 / 10,00. _____________________________________________________________________________________ 
+
+Mely állítás(ok) igaz(ak)?
+Válasszon ki egyet vagy többet:
+   Az általános monoalfabetikus titkosítás titkosított üzeneteinek halmaza a modulo v maradékosztályok testje.
+   Az általános monoalfabetikus titkosítás kulcsterének mérete n!, ahol n az abc mérete
+   Az általános monoalfabetikus titkosítás titkos kulcsa egy permutáció.
+
+
+Mely állítás(ok) igaz(ak)?
+Válasszon ki egyet vagy többet:
+   A történelmi titkosítások aszimmetrikusak.
+   A történelmi titkosítások a mai rendszerekben nem jelennek meg.
+   A történelmi titkosítások valamilyen abc-t használnak.
+   A történelmi titkosítások feltörhetetlenek.
+
+Mely állítás(ok) igaz(ak)?
+Válasszon ki egyet vagy többet:
+   A permutációs titkosítások a teljes abc felett vett permutációkat használ.
+   A permutációs titkosítások kulcsterének mérete n!, ahol n a blokk hossza.
+   A permutációs titkosítás kulcsgeneráló algoritmusa az (1,…,n) összes lehetséges permutációinak legenerálása, ahol n a blokk hossza.
+   A permutációs titkosítások titkosító és visszafejtő algoritmusa ugyanazt a permutációt alkalmazza.
+
+Melyek tatoznak a történelmi titkosításokhoz?
+Válasszon ki egyet vagy többet:
+   helyettesítéses
+   DES
+   OTP
+   permutációs
+
+___DES, 3DES, AES 10,00 / 10,00. ______________________________________________________________________________________________
+
+Mely állítás(ok) igaz(ak)?
+Válasszon ki egyet vagy többet:
+   A DES körkulcsok 48 bitesek.
+   A DES 10 körös titkosítás.
+   A DES kulcsok 32 véletlen bitből állnak.
+   A DES titkosítást ma már nem használják.
+
+Mely titkosítás eredményez 128 bites titkosított üzenetet?
+Válasszon ki egyet vagy többet:
+   RSA
+   AES
+   3DES
+   DES
+
+Hány S-boxot használ a DES?
+Válasszon ki egyet:
+   6
+   16
+   4
+   8
+
+Mely állítás(ok) igaz(ak)?
+Válasszon ki egyet vagy többet:
+   A körkulcsot XOR művelettel adjuk az E kimenetéhez.
+   Az S-box kimenete 6 bit.
+   A DES titkosítás alapja a Feistel struktúra.
+   A 3DES algoritmus 3 körkulcsot használ.
+
+
+___Digitáis aláírások, hash függvények  10,00 / 10,00. _______________________________________________________________________
+
+Milyen hash függvényeket használunk a digitális aláírásoknál?
+Válasszon ki egyet vagy többet:
+   ütközésmentes
+   őskép ellenálló
+   gyengén ütközésmentes
+
+Mely állítás(ok) igaz(ak)?
+Válasszon ki egyet vagy többet:
+   A digitálisan aláírt üzenet hosszabb, mint az üzenet.
+   A digitális aláírás biztosítja az üzenet bizalmasságát.
+   A digitális aláírás a hitelesség eszköze.
+   Az érvényes digitális aláírás biztosítja az üzenet letagadhatatlanságát.
+
+Mely állítás(ok) igaz(ak)?
+Válasszon ki egyet vagy többet:
+   A biztonságos hash függvényekre jellemző a lavinahatás.
+   A hash függvények egy végtelen hosszú üzenethez véges hosszú üzenetet rendelnek.
+   A jelszavak titkosítására hash függvényeket használunk.
+   A hash függvényeket bemenetük vátozatlanságának ellenőrzésére használjuk.
+
+Létezik injektív hash függvény?
+Válasszon ki egyet:
+   igen
+   nem
+
+
+___RSA  10,00 / 10,00. ________________________________________________________________________________________________
+
+Bizonyítható –e, hogy a moduláris hatványozás, ahol a modulus két egyenlő nagyságú prím szorzata egyirányú függvény?
+Válasszon ki egyet:
+  nem
+  igen
+
+Igaz –e, hogy az RSA visszafejtő exponensének kiszámítása a nyilvános kulcsból ugyanolyan nehéz, mint a modulus prímfaktorizációja?
+Válasszon ki egyet:
+   nem
+   igen
+
+Igaz –e, hogy az bizonyított, hogy az RSA probléma ugyanolyan nehéz, mint a prímfaktorizáció problémája?
+Válasszon ki egyet:
+   igen
+   nem
+
+Melyek az RSA algoritmus titkos adatai?
+Válasszon ki egyet vagy többet:
+   RSA modulus
+   fi(n), ahol n a modulus
+   visszafejtő exponens, mely relatív prím fi(n)-hez, ahol n a modulus
+   a nagy prímek
+
+Mely állítás(ok) igaz(ak)?
+Válasszon ki egyet vagy többet:
+   Napjainkban az RSA modulus 4096bites.
+   Bizonyított, hogy a prímfaktorizáció problémája ugyanolyan nehéz, mint az RSA probléma.
+   A tankönyvi RSA titkosító algoritmusa randomizált.
+   A tankönyvi RSA titkosítással szemben több sikeres támadást is találtak.
+
+
+PKI 10,00 / 10,00. ________________________________________________________________________________________________
+
+Mely(ek) a PKI Regisztrációs Hivatalának feladata(i)?
+Válasszon ki egyet vagy többet:
+   Tanúsítványok tárolása.
+   Visszavonási lista tárolása.
+   Kulcspárok generálása.
+   Ügyfelek hitelesítése.
+
+Mely(ek) a PKI Hitelesítő Hivatal feladata(i)?
+Válasszon ki egyet vagy többet:
+   Tanúsítványok visszavonása.
+   Tanúsítványkérések összeállítása.
+   Tanúsítványok aláírása.
+   Kulcspárok generálása.
+
+Mely állítás(ok) igaz(ak)?
+Válasszon ki egyet vagy többet:
+   A felhasználónak csupán el kell küldenie tanúsítványát, és bárki ellenőrizheti, hogy érvényes -e.
+   Érvényes tanúsítványa elegendő, hogy megtudjuk a felhasználó titkos kulcsát.
+   Érvényes tanúsítványa elegendő, hogy a felhasználó hitelesítse magát.
