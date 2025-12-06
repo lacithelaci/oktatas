@@ -1,0 +1,182 @@
+1. Legrövidebb út:
+
+[legrovidebb_ut] min = x12 * 4 + x13 * 3 + x24 *3 + x25 * 2 + x35 * 3 + x46 * 2 + x56 * 2;
+[x1] 1 = x12 + x13;
+[x2] x12 = x24 +x25;
+[x3] x13 = x35;
+[x4] x24 = x46;
+[x5] x25 + x35 = x56;
+[x6] x46 + x56 = 1;
+@bin(x12);
+@bin(x13);
+@bin(x24);
+@bin(x25);
+@bin(x35);
+@bin(x46);
+@bin(x56);
+End
+
+2. Maximális folyam probléma
+
+model:
+[maximalis_folyam] max = s;
+[s0] s = s01 + s02;
+[s1] s01 = s12 + s13;
+[s2] s12 + s02 = s24;
+[s3] s13 = s34;
+[s4] s34 + s24 = s;
+s01 <= 2;
+s02 <= 3;
+s12 <= 3;
+s13 <= 4;
+s24 <= 2;
+s34 <= 1;
+end
+
+3. Halmazlefedési probléma
+
+Model:
+
+[Mennyi induljon] min = x1+x2+x3+x4+x5+x6;
+
+x1 + x2 >= 1;
+x1 + x2 + x6 >= 1;
+x3 + x4 >= 1;
+x3 + x4 + x5 >= 1;
+x4 + x5 + x6 >= 1;
+x2 + x5 + x6 >= 1;
+
+@bin(x1);
+@bin(x2);
+@bin(x3);
+@bin(x4);
+@bin(x5);
+@bin(x6);
+
+
+4. Hátizsák probléma
+
+Model:
+[hasznossag] max = 16*x1 + 22*x2 + 12*x3 + 8*x4;
+[feltetel] 5 * x1 + 7*x2 + 4 *x3 + 3* x4 <= 14;
+@bin(x1);
+@bin(x2);
+@bin(x3);
+@bin(x4);
+
+! Ha T1-t viszi akkor a T2 is kell
+x1 <= x2;
+
+! T2 és T3 közül legfeljebb csak az egyiket vihet
+x2 + x3 <= 1;
+
+!T1 és T4 közül legalább az egyiket vinni kell
+x1 + x4 >= 1;
+
+End
+
+5. Hozzárendelési probléma / Magyar módszer
+
+MODEL:
+! A 4 Machine, 4 Job Assignment Problem;
+SETS:
+   MACHINE / M1, M2, M3, M4/ : CAPACITY;
+   JOB     / J1, J2, J3, J4/ : DEMAND;
+   ASSIGNMENTS( MACHINE, JOB) : TIME, ASSIGN;
+ENDSETS
+
+! The objective;
+ [OBJ] MIN = @SUM( ASSIGNMENTS: TIME * ASSIGN);
+
+! The job constraints;
+ @FOR( JOB( J): [JOB_CON]
+  @SUM( MACHINE( I): ASSIGN( I, J)) >= 
+   DEMAND( J));
+
+! The machine constraints;
+ @FOR( MACHINE( I): [MACH_CON]
+  @SUM( JOB( J): ASSIGN( I, J)) <= 
+   CAPACITY( I));
+
+! Here are the parameters;
+DATA:
+   CAPACITY =   1,1,1,1 ;
+   DEMAND =   1,1,1,1;
+   TIME =      14, 5, 8, 7,
+               2,12,6,5,
+               7,8,3,9,
+               2,4,6,10;
+ENDDATA
+Assign(1,2) = 0; --> ebben az esetben az 1. feladatot nem csinálhatja a 2 kolléga
+
+END
+
+6. Szállítási feladat
+
+MODEL:
+! A 3 Power Plant, 4 City Transportation Problem;
+SETS:
+   POWER_PLANT / PP1, PP2, PP3/ : CAPACITY;
+   CITY         / C1, C2, C3, C4/ : DEMAND;
+   SUPPLY_ROUTES( POWER_PLANT, CITY) : COST, VOLUME;
+ENDSETS
+
+! The objective;
+ [OBJ] MIN = @SUM( SUPPLY_ROUTES: COST * VOLUME);
+
+! The demand constraints;
+ @FOR( CITY( J): [DEM]
+  @SUM( POWER_PLANT( I): VOLUME( I, J)) >= 
+   DEMAND( J));
+
+! The supply constraints;
+ @FOR( POWER_PLANT( I): [SUP]
+  @SUM( CITY( J): VOLUME( I, J)) <= 
+   CAPACITY( I));
+
+! Here are the parameters;
+DATA:
+   CAPACITY =   35,50,40 ;
+   DEMAND =   45,20,30,30;
+   COST =      8,6,10,9,
+               9,12,13,7,
+               14,9,16,5;
+ENDDATA
+END
+
+
+7. Munkaszervezés
+
+[munkasszam] min = x1 + x2 +x3 +x4 + x5 +x6 +x7;
+
+[hetfo] x1 + x7 + x6 + x5 +x4 >= 17;
+[kedd] x2 + x1 + x7 +x6 + x5 >= 13;
+[szerda] x3 + x2 + x1 + x7 + x6 >= 15;
+[csutortok] x4 + x3 + x2 + x1 + x7 >= 19;
+[pentek] x5 + x4 +x3 +x2 +x1 >=14;
+[szombat] x6 +x5 +x4 +x3 + x2 >= 16;
+[vasarnap]   x7 +x6 +x5 +x4 + x3 >= 11;
+
+@gin(x1);
+@gin(x2); 
+@gin(x3); 
+@gin(x4); 
+@gin(x5); 
+@gin(x6); 
+@gin(x7); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+End

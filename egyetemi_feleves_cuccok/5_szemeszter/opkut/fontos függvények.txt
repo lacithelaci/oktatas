@@ -1,0 +1,2 @@
+gin() --> egész értéket vehet csak fel a változó
+free() --> bármilyen értéket felvehet
