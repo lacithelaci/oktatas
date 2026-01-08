@@ -1,0 +1,17 @@
+1. Páros számok kiírása: Írj egy programot, amely 1-től 50-ig kiírja a páros számokat.
+2. Szorzótábla: Kérj be egy számot a felhasználótól, majd írd ki az adott szám szorzótábláját 1–10-ig.
+3. Összegzés: Írj programot, amely összeadja az összes 1–100 közötti számot, ami osztható 3-mal vagy 5-tel.
+4. Faktoriális számítás: Kérj be egy pozitív egész számot a felhasználótól, majd számítsd ki a faktoriálisát.
+5. Számkitaláló játék: A program véletlenszerűen kiválaszt egy számot 1 és 20 között. A felhasználónak tippelnie kell, 
+és a program megmondja, hogy a tipp nagyobb vagy kisebb a cél-számnál, amíg el nem találja.
+6. Prímszám ellenőrzés: Kérj be egy számot, majd ellenőrizd, hogy prímszám-e.
+7. Számjegyek összege: Kérj be egy pozitív egész számot, majd számítsd ki a számjegyeinek összegét.
+8. Összegző függvény: Írj egy függvényt, ami két számot kap paraméterként, és visszaadja az összegüket.
+9. Prímszám ellenőrző függvény: Írj egy függvényt, ami ellenőrzi, hogy egy szám prímszám-e, és True/False értéket ad vissza.
+10. Legnagyobb szám függvény: Írj egy függvényt, ami egy lista számot kap, és visszaadja a legnagyobb számot.
+11. Tömb szűrő függvény: Írj egy függvényt, ami egy listát kap és visszaadja csak a páros számokat egy új listában.
+12. Átlag számító függvény: Írj egy függvényt, ami egy lista számot kap és visszaadja az átlagukat.
+13. Számkocka függvény: Írj egy függvényt, ami egy számot kap, és visszaadja a szám köbét (x³).
+14. Páros számok számlálása: Írj egy függvényt, ami egy listát kap, és visszaadja, hány páros szám van benne.
+15. Párosított lista: Írj egy függvényt, ami két azonos hosszúságú listát kap, 
+és visszaad egy új listát, ami azonos indexű elemek szorzatának összegéből áll.

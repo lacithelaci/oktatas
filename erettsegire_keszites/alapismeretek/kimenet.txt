@@ -1,0 +1,3 @@
+Anna 17 5
+Béla 16 4
+Csaba 17 3

@@ -1,0 +1,31 @@
+Alap szint: változók, feltétel, egyszerű logika
+	Kérj be egy számot, és írd ki, hogy páros vagy páratlan.
+	Kérj be 3 számot, és írd ki a legkisebbet és a legnagyobbat.
+	Kérj be egy életkort, és írd ki, hogy "gyerek", "tinédzser", "felnőtt", "idős".
+	Kérj be egy nevet, és írd ki, hány karakterből áll.
+	Kérj be egy számot, és írd ki a szám faktoriálisát (ciklussal, ne math.factorial).
+	Írj egy programot, ami bekér két számot és kiírja, melyik nagyobb, illetve ha egyenlők, jelezze.
+
+Középszint: listák, ciklusok, függvények
+	Írj egy függvényt, ami visszaadja a Fibonacci-sorozat első n elemét.
+	Készíts egy függvényt, ami megszámolja a magánhangzókat egy sztringben.
+	Készíts egy programot, ami bekér n számot, majd kiszámolja az átlagukat.
+	Készíts egy programot, ami bekér 5 számot, és visszaadja a páros számok listáját.
+	Írj egy függvényt, ami visszaadja a lista legnagyobb és legkisebb elemét tuple-ként.
+	Írj egy programot, ami bekér egy mondatot, és visszaadja a szavak számát.
+
+Emelt szint: dictionary, stringek, hibakezelés
+	Kérj be egy szöveget, és készíts egy dictionary-t, ami megszámolja az egyes karakterek előfordulását.
+	Kérj be egy listát, és készíts egy dictionary-t, ami a számok gyakoriságát tartalmazza.
+	Írj egy programot, ami bekér két számot és elosztja őket, hibakezeléssel (nullával osztás).
+	Írj egy függvényt, ami visszaadja egy szövegben található összes szó hosszát külön listában.
+	Készíts egy programot, ami ellenőrzi, hogy a bekért szöveg palindróm-e.
+	Készíts egy programot, ami kiszűri a duplikált elemeket egy listából.
+
+Osztályok, alap objektum-orientált programozás
+	Hozz létre egy Szemely osztályt nev és eletkor attribútumokkal, és egy bemutatkozas() metódust, ami kiírja: „Szia, a nevem … és … éves vagyok.”
+	Hozz létre egy Teglalap osztályt szelesseg és magassag attribútumokkal, és metódusokat a terület és kerület kiszámítására.
+	Hozz létre egy Diak osztályt, ami örökli a Szemely osztályt, és tartalmaz egy jegyek listát. Írj metódust az átlag kiszámítására.
+	Hozz létre egy Konyv osztályt, ami tartalmaz cim, szerzo, kiadas_eve attribútumokat, és egy kiir() metódust.
+	Készíts egy Auto osztályt, ami rendelkezik marka, evjarat, sebesseg attribútumokkal. Írj metódust a gyorsításra és lassításra.
+	Készíts egy egyszerű Szamologep osztályt, ami képes összeadni, kivonni, szorozni, osztani két számot.

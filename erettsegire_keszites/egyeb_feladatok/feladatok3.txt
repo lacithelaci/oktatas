@@ -1,0 +1,41 @@
+1. Összegző függvény: Írj egy függvényt, ami két számot kap paraméterként, és visszaadja az összegüket.
+2. Prímszám ellenőrző függvény: Írj egy függvényt, ami ellenőrzi, hogy egy szám prímszám-e, és True/False értéket ad vissza.
+3. Legnagyobb szám függvény: Írj egy függvényt, ami egy lista számot kap, és visszaadja a legnagyobb számot.
+4. Tömb szűrő függvény: Írj egy függvényt, ami egy listát kap és visszaadja csak a páros számokat egy új listában.
+5. Átlag számító függvény: Írj egy függvényt, ami egy lista számot kap és visszaadja az átlagukat.
+6. Számkocka függvény: Írj egy függvényt, ami egy számot kap, és visszaadja a szám köbét (x³).
+7. Páros számok számlálása: Írj egy függvényt, ami egy listát kap, és visszaadja, hány páros szám van benne.
+8. Párosított lista: Írj egy függvényt, ami két azonos hosszúságú listát kap, 
+és visszaad egy új listát, ami azonos indexű elemek szorzatának összegéből áll.
+9. Adott a következő string: s = "informatika"
+	Feladatok:
+	a) Írd ki a string első 5 karakterét.
+	b) Írd ki a string utolsó 3 karakterét.
+	c) Írd ki a string hosszát.
+	d) Írd ki a stringet fordított sorrendben.
+10. Karakterek keresése: Adott a következő string: s = "programozás"
+	Feladatok:
+	a) Hány darab 'o' betű van a stringben?
+	b) Melyik indexen található először az 'a'?
+	c) Ellenőrizd, hogy a string tartalmazza-e a 'gram' szót.
+11. Karaktercsere és formázás: Adott a következő string: s = "Python nyelv"
+	Feladatok:
+	a) Cseréld ki a "Python" szót "Java"-ra.
+	b) Írd ki a stringet nagybetűsen.
+	c) Írd ki a stringet kisbetűsen.
+	d) Tördeld a stringet szóközök mentén listává.
+12. Összetett szeletelés: s = "abcdefghij"
+	Feladatok:
+	a) Írd ki minden második karaktert a stringből.
+	b) Írd ki a 3-8. karaktereket (mindkettő beleértve).
+	c) Írd ki a stringet fordított sorrendben, csak a páratlan indexű karaktereket.
+13. Feladat logikával: s = "12345abcde"
+	Feladatok:
+	a) Ellenőrizd, hogy a string csak számokat tartalmaz-e.
+	b) Ellenőrizd, hogy a string csak betűket tartalmaz-e.
+	c) Írd ki az összes számot külön, majd az összes betűt külön.
+14 Haladó – kombinált művelet: s = "Az informatika érdekes!"
+	Feladatok:
+	a) Számold meg, hány magánhangzó van a stringben.
+	b) Cseréld ki minden 'a' betűt '*' karakterre.
+	c) Vágd le az első és az utolsó szót, és írd ki a középső részt (Az informatika szót)

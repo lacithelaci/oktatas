@@ -1,0 +1,60 @@
+1. Adott egy lista, ami tuple-okat tartalmaz. Minden tuple két számot jelent (pl. termék ára, darabszám). 
+Számold ki az összes termék teljes árát.
+products = [(120, 2), (50, 5), (200, 1)]
+# Összesen: 120*2 + 50*5 + 200*1 = 540
+2. Adott egy listában lévő tuple-ok sorozata, mindegyik tuple két számot tartalmaz.
+Válaszd szét a páros és páratlan számokat külön listákba.
+pairs = [(1, 2), (3, 4), (5, 6)]
+# Párosok: [2, 4, 6]
+# Páratlanok: [1, 3, 5]
+3. Adott egy lista tuple-kkal, ahol az első elem a név, a második az életkor. Rendezd a listát életkor szerint csökkenő sorrendbe.
+people = [("Anna", 25), ("Béla", 30), ("Cecília", 22)]
+# Eredmény: [("Béla", 30), ("Anna", 25), ("Cecília", 22)]
+4. Adott egy tuple számokkal. Írj programot, ami visszaadja a legnagyobb számot és a helyét a tuple-ben.
+numbers = (5, 12, 7, 9, 15, 3)
+# Várható eredmény: 15, index 4
+5. Adott egy lista tuple-okkal, minden tuple (diák neve, pontszám). 
+Írj programot, ami visszaadja azoknak a diákoknak a nevét, akik elérték a minimum pontszámot.
+students = [("Anna", 75), ("Béla", 82), ("Cecília", 68)]
+minimum = 70
+# Eredmény: ["Anna", "Béla"]
+
+6. Adott egy szótár, ahol a kulcs termék neve, az érték pedig az ára. Írd meg a programot, ami visszaadja a legdrágább termék nevét és árát.
+products = {"alma": 120, "banán": 50, "cseresznye": 200}
+# Várható eredmény: "cseresznye", 200
+7. Adott egy szótár diákok neveivel és pontszámaival. Keresd ki a minimum pontszámot elérő diákokat.
+students = {"Anna": 75, "Béla": 82, "Cecília": 68}
+minimum = 70
+# Eredmény: ["Anna", "Béla"]
+8. Adott egy szótár termékekkel és darabszámaikkal, valamint árukkal. Számold ki az összes termék teljes árát (darab * ár).
+products = {
+    "alma": (2, 120),
+    "banán": (5, 50),
+    "cseresznye": (1, 200)
+}
+# Eredmény: 2*120 + 5*50 + 1*200 = 540
+9. Számold meg szótárral, hogy egy listában egy adott elem hányszor fordul elő
+
+10. Hozz létre egy Student osztályt, ami tárolja a diák nevét és pontszámait (lista). Írj hozzá egy metódust, 
+ami kiszámolja a diák átlagpontszámát.
+anna = Student("Anna", [75, 82, 68])
+# anna.average() -> 75.0
+11. Hozz létre egy Product osztályt, ami tartalmazza a termék nevét, darabszámát és árát.
+Írj egy metódust, ami visszaadja a teljes árat (darabszám * ár).
+apple = Product("Alma", 3, 120)
+# apple.total_price() -> 360
+12. Hozz létre egy BankAccount osztályt, ami tárolja a tulajdonos nevét és egyenlegét.
+Készíts két metódust:
+deposit(amount) – pénz befizetése
+withdraw(amount) – pénz felvétele (ne lehessen negatív egyenleg)
+account = BankAccount("Béla", 1000)
+account.deposit(500)      # egyenleg: 1500
+account.withdraw(2000)    # hiba, nincs elég pénz
+account.withdraw(200)     # egyenleg: 1300
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+Írj programot, ami a felhasználótól bekér egy számot, majd kiírja az abszolút értékét a math modul segítségével.
+Kérj be két számot, és írd ki a nagyobbik számot a math modul max() függvényével.
+Írj programot, ami a felhasználótól bekért szövegben lévő számokat egészre konvertálva a négyzetgyöküket (math.sqrt()) számolja ki és írja ki.
+Kérj be egy számot, majd írd ki a math.ceil() és math.floor() segítségével a szám felfelé és lefelé kerekített értékeit.
+Írj programot, ami a math modul factorial() függvényét használva kiszámolja a felhasználó által megadott szám faktoriálisát.
+
+Írj programot, ami összeadja a [3, 7, 2, 5, 10] lista összes elemét.
+Írj programot, ami megszámolja, hány szám nagyobb 5-nél a [3, 7, 2, 5, 10] listában.
+Írj programot, ami eldönti, van-e páros szám a [3, 7, 2, 5, 10] listában.
+Írj programot, ami kiválasztja a legnagyobb számot és kiírja az indexét.
+Írj programot, ami keres egy adott értéket (5) a listában és kiírja az indexét, vagy -1-et, ha nincs benne.
+
+Készíts egy adatok.txt fájlt, írd bele 5 sor szöveget, majd olvasd be és írd ki soronként a képernyőre.
+Készíts egy szamok.txt fájlt, írj bele 5 számot, majd írd ki az összegüket és az átlagukat.
+Készíts egy diakok.txt fájlt, soronként a következő adatokkal: Név Kor Jegy. Olvasd be a fájlt és írd ki a diákok adatait formázva.
+Írj programot, ami növekvő sorrendbe rendezi a szamok.txt fájlban lévő számokat és kiírja a képernyőre.
+Írj programot, ami kiválasztásos rendezéssel rendezi a diakok.txt fájl diákjait jegy szerint csökkenő sorrendbe, 
+majd név szerint növekvő sorrendbe azonos jegyeknél.
+Írj programot, ami egy fájlból beolvasott számok közül megszámolja, hány páros szám van, majd írja ki az eredményt egy új eredmeny.txt fájlba.
