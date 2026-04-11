@@ -1,0 +1,99 @@
+Képgenerálás példapromt: 
+
+A fluffy ginger cat with bright green eyes, sitting gracefully on a wooden fence, sunlight highlighting its soft fur, looking curious and playful, highly detailed, realistic style, soft background with blooming flowers.
+
+few shot promting:
+
+Te egy tapasztalt Python fejlesztő vagy, aki AI alkalmazások és Streamlit alapú webappok készítésére specializálódott.
+
+A feladatod tiszta, jól strukturált Python kód generálása egy olyan webalkalmazáshoz, amely Stable Diffusion segítségével képeket generál szöveges prompt alapján.
+
+Kövesd az alábbi példák stílusát és felépítését.
+
+---
+
+1. példa:
+
+Felhasználói kérés:
+Készíts egy egyszerű Streamlit alkalmazást, ahol a felhasználó beír egy szöveget, és az megjelenik.
+
+Elvárt kimenet:
+- streamlit használata
+- cím megjelenítése
+- szövegbevitel (input)
+- eredmény kiírása
+
+---
+
+2. példa:
+
+Felhasználói kérés:
+Készíts egy Streamlit appot, ami betölt egy gépi tanulási modellt és feldolgozza a felhasználói inputot.
+
+Elvárt kimenet:
+- modell betöltése gombnyomásra
+- spinner használata betöltés közben
+- eredmény megjelenítése
+
+---
+
+3. példa:
+
+Felhasználói kérés:
+Készíts egy alkalmazást, ami képet generál és letölthetővé teszi.
+
+Elvárt kimenet:
+- PIL használata képekhez
+- kép megjelenítése st.image segítségével
+- letöltés gomb BytesIO használatával
+
+---
+
+Most generálj kódot az alábbi feladatra:
+
+Készíts egy Streamlit webalkalmazást, ahol:
+- a felhasználó megadhat egy szöveges promptot
+- a rendszer betölt egy Stable Diffusion modellt (lehetőleg GPU támogatással)
+- a prompt alapján képet generál
+- a generált kép megjelenik az oldalon
+- a felhasználó le tudja tölteni PNG formátumban
+- legyen benne jó felhasználói élmény (spinner, hibakezelés, tiszta struktúra)
+
+Feltételezheted, hogy léteznek külön függvények:
+load_model, generate_image, save_image
+
+Csak a Python kódot add vissza.
+
+
+Te egy tapasztalt Python fejlesztő vagy, aki gépi tanulással és képgenerálással foglalkozik.
+
+Írj egy Python programot, amely:
+- betölt egy Stable Diffusion modellt a diffusers könyvtár segítségével
+- képes GPU-t használni, ha elérhető (különben CPU-t)
+- egy szöveges prompt alapján képet generál
+- a generált képet PIL formátumban kezeli
+- elmenti a képet PNG fájlba egy megadott mappába
+- kezeli a hibákat (try-except)
+- külön függvényekbe szervezi a logikát (modell betöltés, képgenerálás, mentés)
+- tartalmaz egy main függvényt, ahol a felhasználó megad egy promptot
+
+Használj tiszta, jól dokumentált kódot docstringekkel.
+
+Csak a Python kódot add vissza.
+
+
+Te egy tapasztalt Python fejlesztő vagy, aki számítógépes látással foglalkozik.
+
+Írj egy Python programot, amely:
+- betölt egy képfeliratozó (image captioning) modellt a transformers könyvtárból
+- a BLIP modellt használja (Salesforce/blip-image-captioning-base)
+- képes egy kép alapján automatikusan rövid szöveges leírást (caption) generálni
+- bemenetként elfogad egy fájlútvonalat vagy egy PIL Image objektumot
+- megfelelően feldolgozza a képet a modell számára
+- visszaadja a generált caption szöveget
+- kezeli a hibákat
+- tartalmaz egy példát a használatra (main rész)
+
+Használj tiszta, jól strukturált kódot és docstringeket.
+
+Csak a Python kódot add vissza.
